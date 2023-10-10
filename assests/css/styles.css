@@ -1,0 +1,563 @@
+
+/*commonn css*/
+.white-text {
+    color: white !important;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+/* color vari, and.... */
+:root {
+    --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.6);
+    --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
+}
+
+/*universal*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Large layout navbar*/
+
+/* navbar --------------------------------------------------------*/
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: var(--nav-bg-lg-layout); 
+    color: #fff;
+    width: 100vw;
+    z-index: 1000;
+}
+
+nav .navbar {
+    height: 100%;
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+
+/* logo brand --------------------------------------------------------*/
+nav .navbar .logo-brand a {
+    
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* Menu --------------------------------------------------------*/
+nav .navbar .nav-links {
+    height: 100%;
+    line-height: 70px;
+}
+
+nav .navbar .nav-links .links{
+    display: flex;
+}
+
+nav .navbar .nav-links .links li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 0 14px;
+}
+
+nav .navbar .nav-links .links li a {
+    text-decoration: none;
+    color: white;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 500;
+}
+/* Arrow of menu --------------------------------------------------------*/
+nav .navbar .nav-links .links li .arrow {
+    height: 100%;
+    line-height: 70px;
+    text-align: center;
+    width: 22px;
+    transition: all 0.3s ease;
+}
+
+nav .navbar .nav-links .links li:hover .branch-arrow{
+    transform: rotate(180deg);
+}
+nav .navbar .nav-links .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+    transform: rotate(90deg);
+}
+
+/* subnav - submenu --------------------------------------------------------*/
+nav .navbar .nav-links .links .sub-menu {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background: var(--nav-bg-lg-layout); 
+    line-height: 40px;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: none;
+    padding: 0;
+}
+
+nav .navbar .nav-links .links .sub-menu li {
+    padding: 0 22px;
+    border-bottom: 1px solid var(--nav-bg-lg-layout);
+}
+
+nav .navbar .nav-links .links .sub-menu li a{
+    font-size: 15px;
+    font: 500;
+}
+
+/* arrow of subnav --------------------------------------------------------*/
+nav .navbar .nav-links .links .sub-menu li .branch-nguyen-trai-arrow {
+    line-height: 40px;
+}
+
+/* submenu's submenu :)) --------------------------------------------------------*/
+nav .navbar .nav-links .links li:hover .branch-sub-menu,
+nav .navbar .nav-links .links .branch-nguyen-trai:hover .branch-nguyen-trai-sub-menu{
+    display: block;
+}
+
+nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 0 4px 4px 4px;
+    display: none;
+}
+
+/* search and account --------------------------------------------------------*/
+.navbar .nav-right {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+.navbar .nav-right .account {
+    position: absolute;
+    right: -50%;
+    height: 40px;
+    width: 40px;
+}
+
+.navbar .nav-right .account i{
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.navbar .search-box {
+    position: relative;
+    height: 40px;
+    width: 40px;
+}
+
+.navbar .search-box i {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    left: -50%;
+}
+
+.navbar .search-box .input-box {
+    height: 60px;
+    width: 300px;
+    background: var(--nav-bg-lg-layout);
+    position: absolute;
+    top: 80px;
+    right: calc(100% - 40px);
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.navbar.showInput .search-box .input-box{
+    top: 65px;
+    opacity: 1;
+    pointer-events: auto;
+
+}
+
+.navbar .search-box .input-box::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: var(--nav-bg-lg-layout);
+    right: 10px;
+    top: -6px;
+    transform: rotate(45deg);
+}
+
+.navbar .search-box .input-box input{
+    position: absolute;
+    height: 35px;
+    width: 280px;
+    z-index: 98;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    border-radius: 4px;
+    padding: 0 15px;
+    font-size: 16px;
+}
+
+
+/* hide sidebar at large layout--------------------------------------------------------*/
+.navbar .bx-menu,
+.nav-links .sidebar-logo-brand .logo-brand-name,
+.nav-links .sidebar-logo-brand .exit-sidebar{
+    display: none;
+}
+
+
+@media (min-width: 954px) {
+    
+    nav .navbar {
+        position: relative;
+    }
+    
+    nav .navbar .nav-links .links{
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+}
+
+
+/* medium nav layout --------------------------------------------------------*/
+@media (max-width: 954px) {
+    nav .navbar {
+        max-width: 100%;
+        padding: 0 25px;
+    }
+    
+
+    nav .navbar .logo-brand a {
+        font-size: 26px;
+    }
+
+    nav .navbar .nav-links .links li {
+        padding: 0 10px;
+    }
+    
+    nav .navbar .nav-links .links li a {
+        font-size: 15px;
+    }
+    .navbar .search-box .input-box,
+    nav .navbar .nav-links .links .sub-menu{
+        background: var(--nav-bg-lg-layout); 
+    }
+
+
+}
+
+/* sm nx layout (sidebar)--------------------------------------------------------*/
+@media (max-width: 800px) {
+
+    /* sidebar nav --------------------------------------------------------*/
+    nav .navbar .nav-links {
+        display: block;
+        position: fixed;
+        background-color: var(--nav-bg-sm-layout);
+        top: 0;
+        left: -100%;
+        max-width: 270px;
+        width: 100%;
+        padding: 20px;
+        line-height: 40px;
+        transition: all 0.5s ease; 
+    }
+
+    nav .navbar .logo-brand{
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        line-height: 40px;
+    }
+
+    /* sidebar logo brand --------------------------------------------------------*/
+    .navbar .nav-links .sidebar-logo-brand {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-links .sidebar-logo-brand{
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    /* sidebar exit btn --------------------------------------------------------*/
+    .nav-links .sidebar-logo-brand .exit-sidebar {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+    }
+
+
+    /* sidebar menu--------------------------------------------------------*/
+    .navbar .bx-menu,
+    .nav-links .sidebar-logo-brand .logo-brand-name,
+    .nav-links .sidebar-logo-brand .exit-sidebar{
+        display: block;
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    
+
+
+    nav .navbar .nav-links .links {
+        display: block;
+        margin-top: 20px;
+    }
+
+    nav .navbar .nav-links .links li {
+        display: block;
+        
+    }
+
+    /* sidebar submenu--------------------------------------------------------*/
+    nav .navbar .nav-links .links li .sub-menu {
+        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        box-shadow: none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    nav .navbar .nav-links .links li .sub-menu li{
+        border-bottom: none;
+    }
+
+
+    /* sidebar submenu's submenu--------------------------------------------------------*/
+    nav .navbar .nav-links .links li:hover .branch-sub-menu,
+    nav .navbar .nav-links .links li:hover .sub-menu .branch-nguyen-trai-sub-menu{
+        display: none;
+    }
+    
+
+    nav .navbar .nav-links .links li .sub-menu .branch-nguyen-trai-sub-menu{
+        display: none;
+        position: relative;
+        left: 0;
+    }
+
+    nav .navbar .nav-links .links li .sub-menu .branch-nguyen-trai-sub-menu li{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav .navbar .nav-links.show1 .links .sub-menu.branch-sub-menu{
+        display: block;
+    }
+    nav .navbar .nav-links.show2 .links .branch-nguyen-trai .sub-menu.branch-nguyen-trai-sub-menu{
+        display: block;
+    }
+
+    /* sidebar all arrow--------------------------------------------------------*/
+    nav .navbar .nav-links .links li .arrow {
+        line-height: 40px;
+
+    }
+
+    nav .navbar .nav-links .links li:hover .branch-arrow,
+    nav .navbar .nav-links .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+        transform: rotate(0deg);
+    }
+
+    nav .navbar .nav-links.show1 .links li:hover .branch-arrow{
+        transform: rotate(180deg)
+    }
+    nav .navbar .nav-links.show2 .links li.branch-nguyen-trai:hover .branch-nguyen-trai-arrow{
+        transform: rotate(90deg);
+    }
+
+}
+
+/* extra sm */
+@media (max-width: 300px){
+    nav .navbar .logo-brand a{
+        font-size: 15px;
+    }
+
+    .navbar .bx-menu,
+    .nav-links .sidebar-logo-brand .logo-brand-name,
+    .nav-links .sidebar-logo-brand .exit-sidebar{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    .navbar .nav-right .account,
+    .navbar .search-box {
+        width: 27px;
+
+        align-items: center;
+    }
+
+    .navbar .nav-right .account i,
+    .navbar .search-box i{
+        line-height: 40px;
+        font-size: 17px;
+    }
+}
+
+
+
+/* Carousel styling */
+#introCarousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item.active {
+    height: 100vh;
+}
+
+#introCarousel {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    margin-top: 0px;
+}
+
+#introCarousel .carousel-item video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -ms-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    display: block;
+    height: 200vh;
+    width: auto;
+    margin: 0 auto;
+    z-index: -10;
+}
+
+@media(max-width: 550px){
+    #introCarousel .carousel-item img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        display: block;
+        height: 100vh;
+        width: auto;
+        margin: 0 auto;
+        z-index: -10;
+    }
+
+    
+    .movie-content {
+        -webkit-line-clamp: 3; /* Số dòng muốn hiển thị */
+    }
+}
+
+@media(min-width: 550px){
+    #introCarousel .carousel-item img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        display: block;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+        z-index: -10;
+    }
+
+    
+    .movie-content {
+        -webkit-line-clamp: 4; /* Số dòng muốn hiển thị */
+    }
+}
+/*carousel control*/
+.carousel-control-prev
+{
+    position: absolute;
+    left: -5%;
+}
+.carousel-control-next{
+    position: absolute;
+    right: -5%;
+}
+
+/*carouseel mask*/
+#introCarousel .carousel-item .mask{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(0, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
+    z-index: -5;
+}
+
+
+/*movie infor carousel*/
+.movie-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    z-index: 0;
+}
+
+.movie-name,
+.movie-info,
+.movie-actors,
+.movie-content,
+.movie-restriction,
+.movie-rating,
+.movie-ticket-booking{
+    margin-top: 2%;
+}
+
+
+
+.movie-content {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
