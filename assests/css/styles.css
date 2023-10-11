@@ -579,7 +579,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 
 
-/* -------------- */
+/* Movie list-------------- */
 
 
 
@@ -599,8 +599,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 .main .movie-list  .movie-card .card .movie-img {
-    width: 100%; /* Đặt kích thước chiều rộng là 100% để tự động điều chỉnh kích thước */
-    padding-bottom: 150%; /* Tạo một hộp chứa có chiều cao dựa trên tỷ lệ khung hình (1:1 trong trường hợp này) */
+    width: 100%;
+    padding-bottom: 150%;
     position: relative;
     border-radius: 10px;
     overflow: hidden;

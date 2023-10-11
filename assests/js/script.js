@@ -50,7 +50,8 @@ branchNguyenTraiArrow.onclick = function() {
 
 
 
-var maxWidth = window.innerWidth * 0.7;
+//break-line
+/* var maxWidth = document.getElementById("#comming-soon").offsetWidth * 1; */
 var isVisible = false;
     
 window.addEventListener('scroll', function () {
@@ -60,7 +61,7 @@ window.addEventListener('scroll', function () {
     
     if (isInViewport) {
         if (!isVisible) {
-            breakline.style.width = maxWidth + 'px';
+            breakline.style.width = '100%';
             isVisible = true;
         }
     }else {
