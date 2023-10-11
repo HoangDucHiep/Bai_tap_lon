@@ -4,15 +4,6 @@
     color: white !important;
 }
 
-html {
-    width: 100vw;
-}
-
-body {
-    background-color: rgb(6, 0, 12);
-    width: 100vw;
-}
-
 
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -29,6 +20,16 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+}
+
+html {
+    width: 100vw;
+}
+
+body {
+    background-color: rgb(6, 0, 12);
+    width: 100vw;
+    font-size: 16px;
 }
 
 
@@ -88,13 +89,16 @@ nav .navbar .nav-links .links li {
 }
 
 nav .navbar .nav-links .links li a {
+    text-transform: uppercase;
     text-decoration: none;
     color: white;
     height: 100%;
     white-space: nowrap;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
+
+
 /* Arrow of menu --------------------------------------------------------*/
 nav .navbar .nav-links .links li .arrow {
     height: 100%;
@@ -173,7 +177,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     width: 100%;
     line-height: 40px;
     text-align: center;
-    font-size: 22px;
+    font-size: 25px;
     font-weight: 500;
     color: white;
 }
@@ -646,11 +650,11 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 .breakline {
     height: 2px;
-    background-color: #9900ff79; 
+    background: linear-gradient(90deg, #4d00f475, #f400bb75); ; 
     width: 0; 
     position: absolute; 
     top: -2.5%; 
     left: 50%; 
     transform: translate(-50%, -50%); 
-    transition: width 1s; 
+    transition: width 0.6s; 
 }
