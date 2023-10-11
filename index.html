@@ -65,7 +65,7 @@
                     </div>
         
                     <div class="account">
-                        <i class='bx bx-user-circle'></i>
+                        <a href=""><i class='bx bx-user-circle'></i></a>
                     </div>
                 </div>
                 <!-- nav most right end (search, account)-->
@@ -80,186 +80,430 @@
     <!--Main part of the web-->
     <main>
         <!-- Carousel wrapper -->
-        <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-bs-ride="carousel">
+        <section id="banner-carousel">
+            <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-bs-ride="carousel">
             
 
-            <!-- Inner -->
-            <div class="carousel-inner">
-                <!-- Single item -->
-                <div class="carousel-item active">
-                    <video class="d-none d-md-block" playsinline autoplay muted loop>
-                        <source src="assests/video/carousel/john wick.webm" type="video/webm">
-                    </video>
-                    <img src="/assests/img/movie/Jhon Wick.jpg" alt="john-wick-movie" class="d-block d-md-none">
-
-                    <div class="mask"></div>
-
-                    <section class="movie-carousel">
-                        <div class="container-lg">
-                            <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
-                                <div class="col-10 col-md-5 text-md-start white-text">
-                                    <!--Movie name-->
-                                    <div class="movie-name">
-                                        <div class="display-5 white-text fw-bolder">Sát Thủ John Wick</div>
-                                        <div class="display-7">John Wick (2014)</div>
-                                    <div>
-                                    <!--Movie information-->
-                                    <div class="row justify-content-center justify-content-md-start movie-info">
-                                        <div class="col-auto col-md-auto">Hành động</div>
-                                        <div class="col-auto col-md-auto">Âu Mỹ</div>
-                                        <div class="col-auto col-md-auto">163 phút</div>
-                                        <div class="col-12 col-md-auto">Đạo diễn: Chad Stahelski</div>
-                                    </div>
-                                    <!--Actors, Actress-->
-                                    <div class="movie-actors row justify-content-center justify-content-md-start">
-                                        <div class="col-md-11 text-truncate">Diễn viên: Keanu Reeves, Alfie Allen, Michael Nyqvist,...</div>
-                                    </div>
-                                    <!--Nội dung-->
-                                    <div class="row justify-content-center justify-content-md-start ">
-                                        <div class="col-md-11 fst-italic movie-content">Nhân vật chính của loạt phim là John Wick do tài tử Keanu Reeves thủ vai, là một cựu sát thủ đã rửa tay gác kiếm, tuy nhiên có những kẻ đã giết chó và trộm xe của anh, khiến anh phải quay trở lại con đường cũ.</div>
-                                    </div>
-                                    <!--Giới hạn độ tuổi-->
-                                    <div class="row justify-content-center justify-content-md-start movie-restriction">
-                                        <div class="col-auto text-danger">Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</div>
-                                    </div>
-                                    <!--Đánh giá-->
-                                    <div class="text-warning justify-content-center justify-content-md-start movie-rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
+                <!-- Inner -->
+                <div class="carousel-inner">
+                    <!-- Single item -->
+                    <div class="carousel-item active">
+                        <video class="d-none d-md-block" playsinline autoplay muted loop>
+                            <source src="assests/video/carousel/john wick.webm" type="video/webm">
+                        </video>
+                        <img src="/assests/img/movie/Jhon Wick.jpg" alt="john-wick-movie" class="d-block d-md-none">
+    
+                        <div class="mask"></div>
+    
+                        <section class="movie-carousel">
+                            <div class="container-lg">
+                                <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
+                                    <div class="col-10 col-md-5 text-md-start white-text">
+                                        <!--Movie name-->
+                                        <div class="movie-name">
+                                            <div class="display-5 white-text fw-bolder">Sát Thủ John Wick</div>
+                                            <div class="display-7">John Wick (2014)</div>
+                                        <div>
+                                        <!--Movie information-->
+                                        <div class="row justify-content-center justify-content-md-start movie-info">
+                                            <div class="col-auto col-md-auto movie-category">Hành động</div>
+                                            <div class="col-auto col-md-auto movie-category">Âu Mỹ</div>
+                                            <div class="col-auto col-md-auto movie-time">163 phút</div>
+                                            <div class="col-12 col-md-auto movie-dir">Đạo diễn: Chad Stahelski</div>
+                                        </div>
+                                        <!--Actors, Actress-->
+                                        <div class="movie-actors row justify-content-center justify-content-md-start">
+                                            <div class="col-md-11 text-truncate">Diễn viên: Keanu Reeves, Alfie Allen, Michael Nyqvist,...</div>
+                                        </div>
+                                        <!--Nội dung-->
+                                        <div class="row justify-content-center justify-content-md-start ">
+                                            <div class="col-md-11 fst-italic movie-content">Nhân vật chính của loạt phim là John Wick do tài tử Keanu Reeves thủ vai, là một cựu sát thủ đã rửa tay gác kiếm, tuy nhiên có những kẻ đã giết chó và trộm xe của anh, khiến anh phải quay trở lại con đường cũ.</div>
+                                        </div>
+                                        <!--Giới hạn độ tuổi-->
+                                        <div class="row justify-content-center justify-content-md-start movie-restriction">
+                                            <div class="col-auto text-danger">Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</div>
+                                        </div>
+                                        <!--Đánh giá-->
+                                        <div class="text-warning justify-content-center justify-content-md-start movie-rating">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        
+                                        <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
                                     </div>
                                     
-                                    <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
                                 </div>
-                                
+                            </div>
+                        </section>
+                    </div>
+    
+                    <!-- Single item -->
+                    <div class="carousel-item active">
+                        <video class="d-none d-md-block" playsinline autoplay muted loop>
+                            <source src="assests/video/carousel/jurasic world.webm" type="video/webm">
+                        </video>
+                        <img src="/assests/img/movie/jurassic world.jpg" alt="john-wick-movie" class="d-block d-md-none">
+    
+                        <div class="mask"></div>
+    
+                        <section class="movie-carousel">
+                            <div class="container-lg">
+                                <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
+                                    <div class="col-10 col-md-5 text-md-start white-text">
+                                        <!--Movie name-->
+                                        <div class="movie-name">
+                                            <div class="display-5 white-text fw-bolder">Thế giới khủng long</div>
+                                            <div class="display-7">Jurassic World Dominion (2022)</div>
+                                        <div>
+                                        <!--Movie information-->
+                                        <div class="row justify-content-center justify-content-md-start movie-info">
+                                            <div class="col-auto col-md-auto movie-category">Phiêu lưu</div>
+                                            <div class="col-auto col-md-auto movie-category">Âu Mỹ</div>
+                                            <div class="col-auto col-md-auto movie-time">147 phút</div>
+                                            <div class="col-12 col-md-auto movie-dir">Đạo diễn: Colin Trevorrow</div>
+                                        </div>
+                                        <!--Actors, Actress-->
+                                        <div class="movie-actors row justify-content-center justify-content-md-start">
+                                            <div class="col-md-11 text-truncate">Diễn viên: Chris Pratt, Bryce Dallas Howard, Isabella Sermon,...</div>
+                                        </div>
+                                        <!--Nội dung-->
+                                        <div class="row justify-content-center justify-content-md-start ">
+                                            <div class="col-md-11 fst-italic movie-content">Bốn năm sau sự kiện trong Jurassic World: Fallen Kingdom, thế giới đã chứng kiến sự tự do của các con khủng long. Owen Grady gặp lại Blue, một trong những khủng long anh yêu thích, và cô đang nuôi một chú con khủng long khác. Owen quyết tâm bảo vệ họ, nhưng hai loài khủng long này khác biệt nhau. Liệu con người và khủng long có thể sống hòa thuận? Chris Pratt và Bryce Dallas Howard tái xuất trong vai Owen Grady và Claire Dearing, và dàn diễn viên gốc như Laura Dern, Sam Neill, Jeff Goldblum và BD Wong cũng trở lại trong các vai nhân vật kinh điển từ Jurassic Park.</div>
+                                        </div>
+                                        <!--Giới hạn độ tuổi-->
+                                        <div class="row justify-content-center justify-content-md-start movie-restriction">
+                                            <div class="col-auto text-danger">Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</div>
+                                        </div>
+                                        <!--Đánh giá-->
+                                        <div class="text-warning justify-content-center justify-content-md-start movie-rating">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        
+                                        <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+    
+                    <!-- Single item -->
+                    <div class="carousel-item active">
+                        <video class="d-none d-md-block" playsinline autoplay muted loop>
+                            <source src="assests/video/carousel/theboys.webm" type="video/webm">
+                        </video>
+                        <img src="/assests/img/movie/the boys.jpg" alt="john-wick-movie" class="d-block d-md-none">
+    
+                        <div class="mask"></div>
+    
+                        <section class="movie-carousel">
+                            <div class="container-lg">
+                                <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
+                                    <div class="col-10 col-md-6 text-md-start white-text">
+                                        <!--Movie name-->
+                                        <div class="movie-name">
+                                            <div class="display-5 white-text fw-bolder">Siêu Anh Hùng Phá Hoại</div>
+                                            <div class="display-7">The Boys (2019)</div>
+                                        <div>
+                                        <!--Movie information-->
+                                        <div class="row justify-content-center justify-content-md-start movie-info">
+                                            <div class="col-auto col-md-auto movie-category">Hành động</div>
+                                            <div class="col-auto col-md-auto movie-category">Âu Mỹ</div>
+                                            <div class="col-auto col-md-auto movie-time">45 phút / 22 tập</div>
+                                            <div class="col-12 col-md-auto movie-dir">Đạo diễn: Dan Trachtenberg, Matt Shakman, Matt Shakman</div>
+                                        </div>
+                                        <!--Actors, Actress-->
+                                        <div class="movie-actors row justify-content-center justify-content-md-start">
+                                            <div class="col-md-11 text-truncate">Diễn viên: Karl Urban, Jack Quaid, Antony Starr, Erin Moriarty,...</div>
+                                        </div>
+                                        <!--Nội dung-->
+                                        <div class="row justify-content-center justify-content-md-start ">
+                                            <div class="col-md-11 fst-italic movie-content ">Trong series giả tưởng đang gây sốt trên mạng Internet, chính những kẻ mặc áo choàng, sở hữu siêu năng lực mới thuộc nhóm phản diện. Được thực hiện bởi Seth Rogen, Evan Goldberg và Eric Kripke, The Boys xoay quanh một thực tại nơi các siêu anh hùng là những người nổi tiếng, có cả một công ty chủ quản là Vought thu về lợi nhuận khổng lồ từ hoạt động marketing, truyền thông, quảng cáo… Đằng sau hình ảnh hào nhoáng trước ống kính và công chúng, nhóm The Seven bao gồm 7 siêu nhân mạnh nhất hóa ra lại là tập hợp của những kẻ ích kỷ, độc ác, biến thái.</div>
+                                        </div>
+                                        <!--Giới hạn độ tuổi-->
+                                        <div class="row justify-content-center justify-content-md-start movie-restriction">
+                                            <div class="col-auto text-danger">Khuyến cáo: T18 - Phim được phổ biến dành cho người đủ 18 tuổi (18+)</div>
+                                        </div>
+                                        <!--Đánh giá-->
+                                        <div class="text-warning justify-content-center justify-content-md-start movie-rating">
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                            <i class="bi bi-star-fill"></i>
+                                        </div>
+                                        
+                                        <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- Inner -->
+    
+                <!-- Controls -->
+                <a class="carousel-control-prev" href="#introCarousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" auteria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#introCarousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </a>
+            </div>
+        </section>
+
+
+        
+        <!-- Carousel wrapper -->
+
+        <div class="main container">
+            <div class="row mt-4">
+                <div class="col-lg-10">
+
+                    <section id="on-going" class="mb-4">
+                        <h2 class="movie-list-heading white-text my-1"><i class='bx bxs-circle text-danger'></i> Đang khởi chiếu</h2>
+                        <div class="row movie-list mt-1 mx-0">
+                            <div class="col-6 col-md-4 col-lg-3 movie-card w-1">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/ant man.jpg" class="card-img-top" alt="ant man">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Ant Man</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/avengers.jpg" class="card-img-top" alt="avengers">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Avengers</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/collage romance.jpg" class="card-img-top" alt="collage romance">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Collage Romance</h4>
+                                            <p class="movie-category m-0">Lãng man, Học đường</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/jurassic world.jpg" class="card-img-top" alt="jurassic world">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Jurassic world</h4>
+                                            <p class="movie-category m-0">Khoa học viễn tưởng, phiêu lưu</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 4.5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/money heist.jpg" class="card-img-top" alt="money heist">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Money Heist</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/Jhon Wick.jpg" class="card-img-top" alt="John Wick">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">John Wick</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/the boys.jpg" class="card-img-top" alt="the boys">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">The boys</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/spiderman.jpg" class="card-img-top" alt="spiderman">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Spiderman - No Way Home</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                                                
+                    </section>
+                    
+
+
+                    <section id="comming-soon" class="my-4">
+
+                        <h2 class="movie-list-heading white-text mt-2"><i class='bx bxs-time-five text-warning'></i> Sắp chiếu</h2>
+                        <div class="row movie-list my-1 mx-0">
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/uncharted.webp" class="card-img-top" alt="uncharted">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Uncharted</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/topgun.jpg" class="card-img-top" alt="topgun">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Topgun - Maverick</h4>
+                                            <p class="movie-category m-0">Hành Động</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/thor love of thunder.jpg" class="card-img-top" alt="thor love of thunder">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Thor love of thunder</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/moon knight.jpg" class="card-img-top" alt="moon knight">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Moon knight</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/kota factory.jpg" class="card-img-top" alt="kota factory">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name fs-5">Kota Factory</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <!-- Break line -->
+                        <div class="breakline"></div>
+                        <!-- On Going -->
                     </section>
+                    <!-- Coming soon -->
+
+
                 </div>
 
-                <!-- Single item -->
-                <div class="carousel-item active">
-                    <video class="d-none d-md-block" playsinline autoplay muted loop>
-                        <source src="assests/video/carousel/jurasic world.webm" type="video/webm">
-                    </video>
-                    <img src="/assests/img/movie/jurassic world.jpg" alt="john-wick-movie" class="d-block d-md-none">
-
-                    <div class="mask"></div>
-
-                    <section class="movie-carousel">
-                        <div class="container-lg">
-                            <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
-                                <div class="col-10 col-md-5 text-md-start white-text">
-                                    <!--Movie name-->
-                                    <div class="movie-name">
-                                        <div class="display-5 white-text fw-bolder">Thế giới khủng long</div>
-                                        <div class="display-7">Jurassic World Dominion (2022)</div>
-                                    <div>
-                                    <!--Movie information-->
-                                    <div class="row justify-content-center justify-content-md-start movie-info">
-                                        <div class="col-auto col-md-auto">Phiêu lưu</div>
-                                        <div class="col-auto col-md-auto">Âu Mỹ</div>
-                                        <div class="col-auto col-md-auto">147 phút</div>
-                                        <div class="col-12 col-md-auto">Đạo diễn: Colin Trevorrow</div>
-                                    </div>
-                                    <!--Actors, Actress-->
-                                    <div class="movie-actors row justify-content-center justify-content-md-start">
-                                        <div class="col-md-11 text-truncate">Diễn viên: Chris Pratt, Bryce Dallas Howard, Isabella Sermon,...</div>
-                                    </div>
-                                    <!--Nội dung-->
-                                    <div class="row justify-content-center justify-content-md-start ">
-                                        <div class="col-md-11 fst-italic movie-content">Bốn năm sau sự kiện trong Jurassic World: Fallen Kingdom, thế giới đã chứng kiến sự tự do của các con khủng long. Owen Grady gặp lại Blue, một trong những khủng long anh yêu thích, và cô đang nuôi một chú con khủng long khác. Owen quyết tâm bảo vệ họ, nhưng hai loài khủng long này khác biệt nhau. Liệu con người và khủng long có thể sống hòa thuận? Chris Pratt và Bryce Dallas Howard tái xuất trong vai Owen Grady và Claire Dearing, và dàn diễn viên gốc như Laura Dern, Sam Neill, Jeff Goldblum và BD Wong cũng trở lại trong các vai nhân vật kinh điển từ Jurassic Park.</div>
-                                    </div>
-                                    <!--Giới hạn độ tuổi-->
-                                    <div class="row justify-content-center justify-content-md-start movie-restriction">
-                                        <div class="col-auto text-danger">Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</div>
-                                    </div>
-                                    <!--Đánh giá-->
-                                    <div class="text-warning justify-content-center justify-content-md-start movie-rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                    
-                                    <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
-                                </div>
-                                
-                            </div>
+                <div class="col-lg-2 ">
+                    <div class="card">
+                        <img src="/assests/img/movie/ant man.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
-                    </section>
-                </div>
-
-                <!-- Single item -->
-                <div class="carousel-item active">
-                    <video class="d-none d-md-block" playsinline autoplay muted loop>
-                        <source src="assests/video/carousel/theboys.webm" type="video/webm">
-                    </video>
-                    <img src="/assests/img/movie/the boys.jpg" alt="john-wick-movie" class="d-block d-md-none">
-
-                    <div class="mask"></div>
-
-                    <section class="movie-carousel">
-                        <div class="container-lg">
-                            <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
-                                <div class="col-10 col-md-6 text-md-start white-text">
-                                    <!--Movie name-->
-                                    <div class="movie-name">
-                                        <div class="display-5 white-text fw-bolder">Siêu Anh Hùng Phá Hoại</div>
-                                        <div class="display-7">The Boys (2019)</div>
-                                    <div>
-                                    <!--Movie information-->
-                                    <div class="row justify-content-center justify-content-md-start movie-info">
-                                        <div class="col-auto col-md-auto">Hành động</div>
-                                        <div class="col-auto col-md-auto">Âu Mỹ</div>
-                                        <div class="col-auto col-md-auto">45 phút / 22 tập</div>
-                                        <div class="col-12 col-md-auto">Đạo diễn: Dan Trachtenberg, Matt Shakman, Matt Shakman</div>
-                                    </div>
-                                    <!--Actors, Actress-->
-                                    <div class="movie-actors row justify-content-center justify-content-md-start">
-                                        <div class="col-md-11 text-truncate">Diễn viên: Karl Urban, Jack Quaid, Antony Starr, Erin Moriarty,...</div>
-                                    </div>
-                                    <!--Nội dung-->
-                                    <div class="row justify-content-center justify-content-md-start ">
-                                        <div class="col-md-11 fst-italic movie-content ">Trong series giả tưởng đang gây sốt trên mạng Internet, chính những kẻ mặc áo choàng, sở hữu siêu năng lực mới thuộc nhóm phản diện. Được thực hiện bởi Seth Rogen, Evan Goldberg và Eric Kripke, The Boys xoay quanh một thực tại nơi các siêu anh hùng là những người nổi tiếng, có cả một công ty chủ quản là Vought thu về lợi nhuận khổng lồ từ hoạt động marketing, truyền thông, quảng cáo… Đằng sau hình ảnh hào nhoáng trước ống kính và công chúng, nhóm The Seven bao gồm 7 siêu nhân mạnh nhất hóa ra lại là tập hợp của những kẻ ích kỷ, độc ác, biến thái.</div>
-                                    </div>
-                                    <!--Giới hạn độ tuổi-->
-                                    <div class="row justify-content-center justify-content-md-start movie-restriction">
-                                        <div class="col-auto text-danger">Khuyến cáo: T18 - Phim được phổ biến dành cho người đủ 18 tuổi (18+)</div>
-                                    </div>
-                                    <!--Đánh giá-->
-                                    <div class="text-warning justify-content-center justify-content-md-start movie-rating">
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                        <i class="bi bi-star-fill"></i>
-                                    </div>
-                                    
-                                    <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
-                                </div>
-                                
-                            </div>
-                        </div>
-                    </section>
+                    </div>
                 </div>
             </div>
-            <!-- Inner -->
-
-            <!-- Controls -->
-            <a class="carousel-control-prev" href="#introCarousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" auteria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#introCarousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </a>
         </div>
-        <!-- Carousel wrapper -->
+
+
+        <!-- Comming soon -->
+        
+        
     </main>
 
 

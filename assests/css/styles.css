@@ -4,11 +4,22 @@
     color: white !important;
 }
 
+html {
+    width: 100vw;
+}
+
+body {
+    background-color: rgb(6, 0, 12);
+    width: 100vw;
+}
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 /* color vari, and.... */
 :root {
-    --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.6);
+    --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
     --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
 }
 
@@ -34,6 +45,7 @@ nav {
     color: #fff;
     width: 100vw;
     z-index: 1000;
+    
 }
 
 nav .navbar {
@@ -146,6 +158,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     display: flex;
     justify-content: end;
     position: relative;
+
 }
 
 .navbar .nav-right .account {
@@ -162,6 +175,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     text-align: center;
     font-size: 22px;
     font-weight: 500;
+    color: white;
 }
 
 .navbar .search-box {
@@ -184,9 +198,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 .navbar .search-box .input-box {
     height: 60px;
     width: 300px;
-    background: var(--nav-bg-lg-layout);
     position: absolute;
-    top: 80px;
+    top: 50px;
     right: calc(100% - 40px);
     border-radius: 6px;
     transition: all 0.3s ease;
@@ -195,22 +208,13 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 .navbar.showInput .search-box .input-box{
-    top: 65px;
+    top: 50px;
     opacity: 1;
     pointer-events: auto;
 
 }
 
-.navbar .search-box .input-box::before {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: var(--nav-bg-lg-layout);
-    right: 10px;
-    top: -6px;
-    transform: rotate(45deg);
-}
+
 
 .navbar .search-box .input-box input{
     position: absolute;
@@ -224,6 +228,10 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     border-radius: 4px;
     padding: 0 15px;
     font-size: 16px;
+    background: rgba(0, 0, 0, 0);
+    border: 1px solid white ;
+    border-radius: 5px;
+    color: white;
 }
 
 
@@ -237,8 +245,9 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 @media (min-width: 954px) {
     
-    nav .navbar {
+    nav .navbar{
         position: relative;
+        backdrop-filter: blur(10px);
     }
     
     nav .navbar .nav-links .links{
@@ -269,7 +278,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     nav .navbar .nav-links .links li a {
         font-size: 15px;
     }
-    .navbar .search-box .input-box,
+
     nav .navbar .nav-links .links .sub-menu{
         background: var(--nav-bg-lg-layout); 
     }
@@ -279,6 +288,10 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 /* sm nx layout (sidebar)--------------------------------------------------------*/
 @media (max-width: 800px) {
+
+    .navbar{
+        background-color: var(--nav-bg-sm-layout);
+    }
 
     /* sidebar nav --------------------------------------------------------*/
     nav .navbar .nav-links {
@@ -292,6 +305,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         padding: 20px;
         line-height: 40px;
         transition: all 0.5s ease; 
+        backdrop-filter: blur(10px);
     }
 
     nav .navbar .logo-brand{
@@ -446,6 +460,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     width: 100%;
     height: 100vh;
     margin-top: 0px;
+    overflow: hidden;
 }
 
 #introCarousel .carousel-item video {
@@ -560,4 +575,82 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+
+
+/* -------------- */
+
+
+
+.main .movie-list  .movie-card .card {
+    
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    max-width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.main .movie-list  .movie-card .card .card-body {
+    padding: 10px 0;
+
+}
+
+.main .movie-list  .movie-card .card .movie-img {
+    width: 100%; /* Đặt kích thước chiều rộng là 100% để tự động điều chỉnh kích thước */
+    padding-bottom: 150%; /* Tạo một hộp chứa có chiều cao dựa trên tỷ lệ khung hình (1:1 trong trường hợp này) */
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.main .movie-list  .movie-card .card .movie-img img{
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.main .movie-list  .movie-card .card:hover .movie-img img{
+    transform: scale(1.1);
+}
+
+.main .movie-list  .movie-card .card a{
+    text-decoration: none;
+    color: white;
+}
+
+.main .movie-list  .movie-card .card a .movie-category{
+    font-size: 75%;
+    font-weight: 600;
+    color: rgb(82, 82, 82);
+}
+
+.main .movie-list  .movie-card .card a .movie-name {
+    margin-top: 0;
+}
+
+
+.main .movie-list  .movie-card .card a .bxs-star{
+    color: yellow;
+}
+
+#comming-soon{
+    position: relative;
+}
+
+/*--------------------------- Break line ---------------------------------------------- */
+
+.breakline {
+    height: 2px;
+    background-color: #9900ff79; 
+    width: 0; 
+    position: absolute; 
+    top: -2.5%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    transition: width 1s; 
 }

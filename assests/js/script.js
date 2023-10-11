@@ -47,3 +47,27 @@ branchNguyenTraiArrow.onclick = function() {
         navLinks.classList.add("show2");
     }
 };
+
+
+
+var maxWidth = window.innerWidth * 0.7;
+var isVisible = false;
+    
+window.addEventListener('scroll', function () {
+    var breakline = document.querySelector('.breakline');
+    var rect = breakline.getBoundingClientRect();
+    var isInViewport = (rect.top >= 0 && rect.bottom <= window.innerHeight);
+    
+    if (isInViewport) {
+        if (!isVisible) {
+            breakline.style.width = maxWidth + 'px';
+            isVisible = true;
+        }
+    }else {
+        if (isVisible) {
+            breakline.style.width = '0';
+            isVisible = false;
+        }
+    }
+});
+    
