@@ -1,4 +1,84 @@
+/* Carousel stuff-------------------------------- */
+$(document).ready(function () {
+    // Khởi tạo slider chính
+    $('.main-slide').slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      /* autoplay: true,
+      autoplaySpeed: 10000, */
+      asNavFor: '.center-slider',
+    });
 
+
+    var firstVideo = $('.main-slide .item').eq(0).find('video')[0];
+    if (firstVideo) {
+      firstVideo.play();
+    }
+
+    // Khi slide thay đổi
+    $('.main-slide').on('afterChange', function(event, slick, currentSlide){
+      var currentVideo = $('.main-slide .item').eq(currentSlide).find('video')[0];
+      if (currentVideo) {
+        currentVideo.play();
+      }
+    });
+
+
+    // Khi slide thay đổi
+    $('.main-slide').on('afterChange', function(event, slick, currentSlide){
+      var currentVideo = $('.main-slide .item').eq(currentSlide).find('video')[0];
+      if (currentVideo) {
+        currentVideo.play();
+      }
+    });
+
+    
+
+    // Khởi tạo slider dẫn hướng
+    $('.center-slider').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerMode: true,
+      arrows: false,
+      dots: false,
+      speed: 300,
+      centerPadding: '0px',
+      infinite: true,
+      autoplaySpeed: 5000,
+      autoplay: true,
+      asNavFor: '.main-slide',
+      focusOnSelect: true,
+      responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1,
+        }
+      },
+      {
+        breakpoint: 570,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      },
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+      ]
+    });
+
+
+    $(window).on('load', function() {
+      firstVideo.play();
+    });
+  });
+
+  
 /*--nav bar stuff---------------------------------*/
 
 //search box openclose------------------------------

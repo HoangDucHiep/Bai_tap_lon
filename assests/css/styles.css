@@ -24,11 +24,13 @@
 
 html {
     width: 100vw;
+    height: 100%;
 }
 
 body {
     background-color: rgb(6, 0, 12);
     width: 100vw;
+    height: 100%;
     font-size: 16px;
 }
 
@@ -310,6 +312,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         line-height: 40px;
         transition: all 0.5s ease; 
         backdrop-filter: blur(10px);
+        z-index: 2000;
     }
 
     nav .navbar .logo-brand{
@@ -335,6 +338,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         color: #fff;
         font-size: 25px;
         font-weight: 500;
+        z-index: 2000;
     }
 
 
@@ -449,137 +453,299 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 
+/* carousel styles------------------------- */
+/* Main carousel */
 
-/* Carousel styling */
-#introCarousel,
-.carousel-inner,
-.carousel-item,
-.carousel-item.active {
+
+
+
+.intro-carousel {
+    width: 100vw;
     height: 100vh;
-}
-
-#introCarousel {
     position: relative;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    margin-top: 0px;
-    overflow: hidden;
 }
 
-#introCarousel .carousel-item video {
+
+.main-slide .item {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-slide .item video {
     position: absolute;
+    display: block;
     top: 50%;
     left: 50%;
-    margin-right: -50%;
     -ms-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
     display: block;
-    height: 200vh;
     width: auto;
-    margin: 0 auto;
     z-index: -10;
 }
 
-@media(max-width: 550px){
-    #introCarousel .carousel-item img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        -ms-transform: translate(-50%,-50%);
-        -moz-transform: translate(-50%,-50%);
-        -webkit-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
-        display: block;
-        height: 100vh;
-        width: auto;
-        margin: 0 auto;
-        z-index: -10;
-    }
-
-    
-    .movie-content {
-        -webkit-line-clamp: 3; /* Số dòng muốn hiển thị */
-    }
+.main-slide .item img {
+    display: none;
 }
 
-@media(min-width: 550px){
-    #introCarousel .carousel-item img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        -ms-transform: translate(-50%,-50%);
-        -moz-transform: translate(-50%,-50%);
-        -webkit-transform: translate(-50%,-50%);
-        transform: translate(-50%,-50%);
-        display: block;
-        height: auto;
-        width: 100%;
-        margin: 0 auto;
-        z-index: -10;
-    }
-
-    
-    .movie-content {
-        -webkit-line-clamp: 4; /* Số dòng muốn hiển thị */
-    }
-}
-/*carousel control*/
-.carousel-control-prev
-{
+.main-slide .item .slide-movie-text {
+    width: 40%;
     position: absolute;
-    left: -5%;
-}
-.carousel-control-next{
-    position: absolute;
-    right: -5%;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5%;
 }
 
-/*carouseel mask*/
-#introCarousel .carousel-item .mask{
+.main-slide .item .slide-movie-text h1,
+.main-slide .item .slide-movie-text h6,
+.main-slide .item .slide-movie-text p {
+    margin-bottom: 0;
+}
+
+.main-slide .item .slide-movie-text .movie-name {
+    margin-bottom: 4%;
+}
+
+.main-slide .item .slide-movie-text .movie-category {
+    margin-bottom: 2%;
+}
+
+.main-slide .item .slide-movie-text .movie-category p {
+    margin-right: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+
+    background: #0700cd60;
+    border-radius: 5px;
+}
+.main-slide .item .slide-movie-text .movie-time  {
+    margin-bottom: 2%;
+}
+
+.main-slide .item .slide-movie-text .movie-time p{
+    padding-left: 1%;
+    padding-right: 1%;
+    width: max-content;
+    background: #ae00cd60;
+    border-radius: 5px;
+}
+
+.main-slide .item .slide-movie-text .movie-dir {
+    display: block;
+    margin-bottom: 2%;
+}
+
+.main-slide .item .slide-movie-text .movie-act {
+    display: block;
+    margin-bottom: 2%;
+}
+
+.main-slide .item .slide-movie-text .movie-content {
+    margin-bottom: 2%;
+}
+
+.main-slide .item .slide-movie-text .movie-restriction {
+    margin-bottom: 2%;
+}
+
+.main-slide .item .slide-movie-text .movie-rating {
+    margin-bottom: 2%;
+}
+
+.movie-content {
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+}
+
+
+/* mask */
+.mask{
     position: absolute;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(0, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 1));
-    z-index: -5;
-}
-
-
-/*movie infor carousel*/
-.movie-carousel {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100vh;
+    background: linear-gradient(0, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 1));
     z-index: 0;
 }
 
-.movie-name,
-.movie-info,
-.movie-actors,
-.movie-content,
-.movie-restriction,
-.movie-rating,
-.movie-ticket-booking{
-    margin-top: 2%;
+
+/* Nav-carousel */
+
+.intro-nav-slider {
+    width: 48vw;
+}
+
+
+.intro-carousel .intro-nav-slider .intro-nav-slider-container{
+    position: relative;
+}
+
+.intro-carousel .intro-nav-slider .intro-nav-slider-container .trending-title {
+    color: white;
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.center-slider {
 }
 
 
 
-.movie-content {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+@media (min-width: 800px) {
+
+    .center-slider .item img{
+        width: 20vw;
+        height: 30vw;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .intro-carousel .intro-nav-slider{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 50%;
+    }
+
+    .center-slider .slick-slide{
+        color: #FFF;
+        width: 20vw;
+        height: 30vw;
+        margin: 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in-out;
+      }
+    
+      
+      .center-slider .slick-slide,
+      .center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+        transform: scale(0.55, 0.55);
+        opacity: 0.5;
+        transition: all 0.4s ease-in-out;
+      }
+      
+      /* Active center slide (You can change anything here for cenetr slide)*/
+      .center-slider .slick-current.slick-active{
+        opacity: 1;
+        transform: scale(0.8);
+      }
+      
 }
+
+
+@media (max-width: 800px) {
+
+    .main-slide .item video {
+        display: none;
+    }
+    
+    .main-slide .item img {
+        position: absolute;
+        display: block;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        height: 200%;
+        width: auto;
+        z-index: -10;
+    }
+
+    .main-slide .item .slide-movie-text {
+        width: 80%;
+        position: absolute;
+        top: 43%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center; /* Center align the text */
+    }
+
+    .movie-content {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
+    .main-slide .item .slide-movie-text .movie-dir {
+        display: none;
+    }
+    
+    .main-slide .item .slide-movie-text .movie-act {
+        display: none;
+    }
+
+    .movie-category {
+        justify-content: center;
+    }
+    .movie-category,
+    .movie-time {
+        display: inline-block; /* Display inline-block to center elements */
+        margin: 0 2%; /* Add some margin for spacing */
+    }
+
+    .center-slider .item img{
+        width: 20vh;
+        height: 30vh;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .intro-nav-slider {
+        width: 100vw;
+    }
+
+    .intro-carousel .intro-nav-slider{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    .center-slider .slick-slide{
+        color: #FFF;
+        width: 20vh;
+        height: 30vh;
+        margin: 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s ease-in-out;
+    }
+    
+    
+    .center-slider .slick-slide,
+    .center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+        transform: scale(0.6, 0.6);
+        opacity: 0.5;
+        transition: all 0.4s ease-in-out;
+    }
+      
+    /* Active center slide (You can change anything here for cenetr slide)*/
+    .center-slider .slick-current.slick-active{
+        opacity: 1;
+        transform: scale(0.65);
+    }
+      
+    
+}
+
+
 
 
 

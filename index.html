@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Rap chieu proVip</title>
+
+    <!-- import incon -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- slick slider -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+
+    <!-- bootstrap & css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/assests/css/styles.css">
 
@@ -80,187 +88,173 @@
     <!--Main part of the web-->
     <main>
         <!-- Carousel wrapper -->
-        <section id="banner-carousel">
-            <div id="introCarousel" class="carousel slide carousel-fade shadow-2-strong" data-bs-ride="carousel">
-            
-
-                <!-- Inner -->
-                <div class="carousel-inner">
-                    <!-- Single item -->
-                    <div class="carousel-item active">
-                        <video class="d-none d-md-block" playsinline autoplay muted loop>
-                            <source src="assests/video/carousel/john wick.webm" type="video/webm">
-                        </video>
-                        <img src="/assests/img/movie/Jhon Wick.jpg" alt="john-wick-movie" class="d-block d-md-none">
-    
-                        <div class="mask"></div>
-    
-                        <section class="movie-carousel">
-                            <div class="container-lg">
-                                <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
-                                    <div class="col-10 col-md-5 text-md-start white-text">
-                                        <!--Movie name-->
-                                        <div class="movie-name">
-                                            <div class="display-5 white-text fw-bolder">Sát Thủ John Wick</div>
-                                            <div class="display-7">John Wick (2014)</div>
-                                        <div>
-                                        <!--Movie information-->
-                                        <div class="row justify-content-center justify-content-md-start movie-info">
-                                            <div class="col-auto col-md-auto movie-category">Hành động</div>
-                                            <div class="col-auto col-md-auto movie-category">Âu Mỹ</div>
-                                            <div class="col-auto col-md-auto movie-time">163 phút</div>
-                                            <div class="col-12 col-md-auto movie-dir">Đạo diễn: Chad Stahelski</div>
-                                        </div>
-                                        <!--Actors, Actress-->
-                                        <div class="movie-actors row justify-content-center justify-content-md-start">
-                                            <div class="col-md-11 text-truncate">Diễn viên: Keanu Reeves, Alfie Allen, Michael Nyqvist,...</div>
-                                        </div>
-                                        <!--Nội dung-->
-                                        <div class="row justify-content-center justify-content-md-start ">
-                                            <div class="col-md-11 fst-italic movie-content">Nhân vật chính của loạt phim là John Wick do tài tử Keanu Reeves thủ vai, là một cựu sát thủ đã rửa tay gác kiếm, tuy nhiên có những kẻ đã giết chó và trộm xe của anh, khiến anh phải quay trở lại con đường cũ.</div>
-                                        </div>
-                                        <!--Giới hạn độ tuổi-->
-                                        <div class="row justify-content-center justify-content-md-start movie-restriction">
-                                            <div class="col-auto text-danger">Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</div>
-                                        </div>
-                                        <!--Đánh giá-->
-                                        <div class="text-warning justify-content-center justify-content-md-start movie-rating">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        
-                                        <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </section>
+        <section class="intro-carousel">
+            <div class="main-slide">
+        
+              <!-- Single item -->
+              <div class="item">
+                <video src="/assests/video/carousel/john wick.webm" class=""></video>
+                <img src="/assests/img/movie/Jhon Wick.jpg" alt="">
+                <div class="mask"></div>
+                <div class="movie slide-movie-text text-light">
+                  <div class="movie-name">
+                    <h1>John Wick</h2>
+                    <h6>John Wick</h4>
+                  </div>
+                  <div class="movie-infor">
+                    <div class="movie-category d-flex">
+                      <p>Hành động</p>
+                      <p>Bắn súng</p>
                     </div>
-    
-                    <!-- Single item -->
-                    <div class="carousel-item active">
-                        <video class="d-none d-md-block" playsinline autoplay muted loop>
-                            <source src="assests/video/carousel/jurasic world.webm" type="video/webm">
-                        </video>
-                        <img src="/assests/img/movie/jurassic world.jpg" alt="john-wick-movie" class="d-block d-md-none">
-    
-                        <div class="mask"></div>
-    
-                        <section class="movie-carousel">
-                            <div class="container-lg">
-                                <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
-                                    <div class="col-10 col-md-5 text-md-start white-text">
-                                        <!--Movie name-->
-                                        <div class="movie-name">
-                                            <div class="display-5 white-text fw-bolder">Thế giới khủng long</div>
-                                            <div class="display-7">Jurassic World Dominion (2022)</div>
-                                        <div>
-                                        <!--Movie information-->
-                                        <div class="row justify-content-center justify-content-md-start movie-info">
-                                            <div class="col-auto col-md-auto movie-category">Phiêu lưu</div>
-                                            <div class="col-auto col-md-auto movie-category">Âu Mỹ</div>
-                                            <div class="col-auto col-md-auto movie-time">147 phút</div>
-                                            <div class="col-12 col-md-auto movie-dir">Đạo diễn: Colin Trevorrow</div>
-                                        </div>
-                                        <!--Actors, Actress-->
-                                        <div class="movie-actors row justify-content-center justify-content-md-start">
-                                            <div class="col-md-11 text-truncate">Diễn viên: Chris Pratt, Bryce Dallas Howard, Isabella Sermon,...</div>
-                                        </div>
-                                        <!--Nội dung-->
-                                        <div class="row justify-content-center justify-content-md-start ">
-                                            <div class="col-md-11 fst-italic movie-content">Bốn năm sau sự kiện trong Jurassic World: Fallen Kingdom, thế giới đã chứng kiến sự tự do của các con khủng long. Owen Grady gặp lại Blue, một trong những khủng long anh yêu thích, và cô đang nuôi một chú con khủng long khác. Owen quyết tâm bảo vệ họ, nhưng hai loài khủng long này khác biệt nhau. Liệu con người và khủng long có thể sống hòa thuận? Chris Pratt và Bryce Dallas Howard tái xuất trong vai Owen Grady và Claire Dearing, và dàn diễn viên gốc như Laura Dern, Sam Neill, Jeff Goldblum và BD Wong cũng trở lại trong các vai nhân vật kinh điển từ Jurassic Park.</div>
-                                        </div>
-                                        <!--Giới hạn độ tuổi-->
-                                        <div class="row justify-content-center justify-content-md-start movie-restriction">
-                                            <div class="col-auto text-danger">Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</div>
-                                        </div>
-                                        <!--Đánh giá-->
-                                        <div class="text-warning justify-content-center justify-content-md-start movie-rating">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        
-                                        <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </section>
+                    <div class="movie-time"><p>163 phút</p></div>
+                    <div class="movie-dir"><p>Đạo diễn: Chad Stahelski</p></div>
+                    <div class="movie-act"><p>Diễn viên: Keanu Reeves, Alfie Allen, Michael Nyqvist,...</p></div>
+                    <div class="fst-italic movie-content"><p>Nhân vật chính của loạt phim là John Wick do tài tử Keanu Reeves thủ vai, là một cựu sát thủ đã rửa tay gác kiếm, tuy nhiên có những kẻ đã giết chó và trộm xe của anh, khiến anh phải quay trở lại con đường cũ.</p></div>
+                    <div class="text-danger movie-restriction"><p>Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</p></div>
+                  <!--Đánh giá-->
+                    <div class="text-warning movie-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
                     </div>
-    
-                    <!-- Single item -->
-                    <div class="carousel-item active">
-                        <video class="d-none d-md-block" playsinline autoplay muted loop>
-                            <source src="assests/video/carousel/theboys.webm" type="video/webm">
-                        </video>
-                        <img src="/assests/img/movie/the boys.jpg" alt="john-wick-movie" class="d-block d-md-none">
-    
-                        <div class="mask"></div>
-    
-                        <section class="movie-carousel">
-                            <div class="container-lg">
-                                <div class="row g-4 justify-content-center justify-content-md-start align-items-center text-center text-md-start">
-                                    <div class="col-10 col-md-6 text-md-start white-text">
-                                        <!--Movie name-->
-                                        <div class="movie-name">
-                                            <div class="display-5 white-text fw-bolder">Siêu Anh Hùng Phá Hoại</div>
-                                            <div class="display-7">The Boys (2019)</div>
-                                        <div>
-                                        <!--Movie information-->
-                                        <div class="row justify-content-center justify-content-md-start movie-info">
-                                            <div class="col-auto col-md-auto movie-category">Hành động</div>
-                                            <div class="col-auto col-md-auto movie-category">Âu Mỹ</div>
-                                            <div class="col-auto col-md-auto movie-time">45 phút / 22 tập</div>
-                                            <div class="col-12 col-md-auto movie-dir">Đạo diễn: Dan Trachtenberg, Matt Shakman, Matt Shakman</div>
-                                        </div>
-                                        <!--Actors, Actress-->
-                                        <div class="movie-actors row justify-content-center justify-content-md-start">
-                                            <div class="col-md-11 text-truncate">Diễn viên: Karl Urban, Jack Quaid, Antony Starr, Erin Moriarty,...</div>
-                                        </div>
-                                        <!--Nội dung-->
-                                        <div class="row justify-content-center justify-content-md-start ">
-                                            <div class="col-md-11 fst-italic movie-content ">Trong series giả tưởng đang gây sốt trên mạng Internet, chính những kẻ mặc áo choàng, sở hữu siêu năng lực mới thuộc nhóm phản diện. Được thực hiện bởi Seth Rogen, Evan Goldberg và Eric Kripke, The Boys xoay quanh một thực tại nơi các siêu anh hùng là những người nổi tiếng, có cả một công ty chủ quản là Vought thu về lợi nhuận khổng lồ từ hoạt động marketing, truyền thông, quảng cáo… Đằng sau hình ảnh hào nhoáng trước ống kính và công chúng, nhóm The Seven bao gồm 7 siêu nhân mạnh nhất hóa ra lại là tập hợp của những kẻ ích kỷ, độc ác, biến thái.</div>
-                                        </div>
-                                        <!--Giới hạn độ tuổi-->
-                                        <div class="row justify-content-center justify-content-md-start movie-restriction">
-                                            <div class="col-auto text-danger">Khuyến cáo: T18 - Phim được phổ biến dành cho người đủ 18 tuổi (18+)</div>
-                                        </div>
-                                        <!--Đánh giá-->
-                                        <div class="text-warning justify-content-center justify-content-md-start movie-rating">
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                            <i class="bi bi-star-fill"></i>
-                                        </div>
-                                        
-                                        <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </section>
-                    </div>
+        
+                    <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
+                  </div>
+                  
                 </div>
-                <!-- Inner -->
-    
-                <!-- Controls -->
-                <a class="carousel-control-prev" href="#introCarousel" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" auteria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#introCarousel" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
+              </div>
+              
+              <!-- Single item -->
+              <div class="item">
+                <video src="/assests/video/carousel/jurasic world.webm" class=""></video>
+                <img src="/assests/img/movie/jurassic world.jpg" alt="">
+                <div class="mask"></div>
+                <div class="movie slide-movie-text text-light">
+                  <div class="movie-name">
+                    <h1>Thế giới khủng long</h2>
+                    <h6>Jurassic World Dominion</h4>
+                  </div>
+                  <div class="movie-infor">
+                    <div class="movie-category d-flex">
+                      <p>Hành động</p>
+                      <p>Phiêu lưu</p>
+                    </div>
+                    <div class="movie-time"><p>147 phút</p></div>
+                    <div class="movie-dir"><p>Đạo diễn: Colin Trevorrow</p></div>
+                    <div class="movie-act"><p>Diễn viên: Chris Pratt, Bryce Dallas Howard, Isabella Sermon,...</p></div>
+                    <div class="fst-italic movie-content"><p>Bốn năm sau sự kiện trong Jurassic World: Fallen Kingdom, thế giới đã chứng kiến sự tự do của các con khủng long. Owen Grady gặp lại Blue, một trong những khủng long anh yêu thích, và cô đang nuôi một chú con khủng long khác. Owen quyết tâm bảo vệ họ, nhưng hai loài khủng long này khác biệt nhau. Liệu con người và khủng long có thể sống hòa thuận? Chris Pratt và Bryce Dallas Howard tái xuất trong vai Owen Grady và Claire Dearing, và dàn diễn viên gốc như Laura Dern, Sam Neill, Jeff Goldblum và BD Wong cũng trở lại trong các vai nhân vật kinh điển từ Jurassic Park.</p></div>
+                    <div class="text-danger movie-restriction"><p>Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</p></div>
+                  <!--Đánh giá-->
+                    <div class="text-warning movie-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+        
+                    <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
+                  </div>
+                  
+                </div>
+              </div>
+        
+              <!-- Single item -->
+              <div class="item">
+                <video src="/assests/video/carousel/theboys.webm" class=""></video>
+                <img src="/assests/img/movie/the boys.jpg" alt="">
+                <div class="mask"></div>
+                <div class="movie slide-movie-text text-light">
+                  <div class="movie-name">
+                    <h1>Siêu Anh Hùng Phá Hoại</h2>
+                    <h6>The Boys</h4>
+                  </div>
+                  <div class="movie-infor">
+                    <div class="movie-category d-flex">
+                      <p>Hành động</p>
+                      <p>Viễn tưởng</p>
+                    </div>
+                    <div class="movie-time"><p>45 phút</p></div>
+                    <div class="movie-dir"><p>Đạo diễn: Dan Trachtenberg, Matt Shakman, Matt Shakman</p></div>
+                    <div class="movie-act"><p>Diễn viên: Karl Urban, Jack Quaid, Antony Starr, Erin Moriarty,...</p></div>
+                    <div class="fst-italic movie-content"><p>Trong series giả tưởng đang gây sốt trên mạng Internet, chính những kẻ mặc áo choàng, sở hữu siêu năng lực mới thuộc nhóm phản diện. Được thực hiện bởi Seth Rogen, Evan Goldberg và Eric Kripke, The Boys xoay quanh một thực tại nơi các siêu anh hùng là những người nổi tiếng, có cả một công ty chủ quản là Vought thu về lợi nhuận khổng lồ từ hoạt động marketing, truyền thông, quảng cáo… Đằng sau hình ảnh hào nhoáng trước ống kính và công chúng, nhóm The Seven bao gồm 7 siêu nhân mạnh nhất hóa ra lại là tập hợp của những kẻ ích kỷ, độc ác, biến thái.</p></div>
+                    <div class="text-danger movie-restriction"><p>Khuyến cáo: T18 - Phim được phổ biến dành cho người đủ 18 tuổi (18+)</p></div>
+                  <!--Đánh giá-->
+                    <div class="text-warning movie-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+        
+                    <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
+                  </div>
+                  
+                </div>
+              </div>
+        
+              <!-- Single item -->
+              <div class="item">
+                <video src="/assests/video/carousel/spider-man.webm" class=""></video>
+                <img src="/assests/img/movie/spiderman.jpg" alt="">
+                <div class="mask"></div>
+                <div class="movie slide-movie-text text-light">
+                  <div class="movie-name">
+                    <h1>Người nhện - Không còn nhà</h2>
+                    <h6>Spider-Man No Way Home</h4>
+                  </div>
+                  <div class="movie-infor">
+                    <div class="movie-category d-flex">
+                      <p>Hành động</p>
+                      <p>Viễn tưởng</p>
+                    </div>
+                    <div class="movie-time"><p>218 phút</p></div>
+                    <div class="movie-dir"><p>Đạo diễn: Jon Watts</p></div>
+                    <div class="movie-act"><p>Diễn viên: Zendaya, Tom Holland, Jon Favreau, Benedict Cumberbatch, Angourie Rice,...</p></div>
+                    <div class="fst-italic movie-content"><p>Không Còn Nhà kể về lần đầu tiên trong lịch sử điện ảnh của Người Nhện, thân phận người hàng xóm thân thiện bị lật mở, khiến trách nhiệm làm một Siêu Anh Hùng xung đột với cuộc sống bình thường và đặt người anh quan tâm nhất vào tình thế nguy hiểm. Khi anh nhờ đến giúp đỡ của Doctor Strange để khôi phục lại bí mật, phép thuật đã gây ra lỗ hổng thời không, giải phóng những ác nhân mạnh mẽ nhất từng đối đầu với Người Nhện từ mọi vũ trụ. Bây giờ, Peter sẽ phải vượt qua thử thách lớn nhất của mình, nó sẽ thay đổi không chỉ tương lai của chính anh mà còn là tương lai của cả Đa Vũ Trụ.</p></div>
+                    <div class="text-danger movie-restriction"><p>Khuyến cáo: T13 - Phim được phổ biến dành cho người đủ 13 tuổi (13+)</p></div>
+                  <!--Đánh giá-->
+                    <div class="text-warning movie-rating">
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                        <i class="bi bi-star-fill"></i>
+                    </div>
+        
+                    <a href="#" class="btn btn-secondary btn-lg movie-ticket-booking">Đặt vé</a>
+                  </div>
+                  
+                </div>
+              </div>
+        
             </div>
-        </section>
+        
+        
+            <div class="intro-nav-slider">
+              <div class="intro-nav-slider-container">
+                <div class="trending-title d-1"><h2><i class="bi bi-fire text-danger"></i> Đang hot</h2></div>
+                <div class="center-slider">
+                  <div class="item">
+                    <img src="/assests/img/movie/Jhon Wick.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="/assests/img/movie//jurassic world.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="/assests/img/movie/the boys.jpg" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="/assests/img/movie/spiderman.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </section>
         <!-- Carousel wrapper -->
 
 
@@ -503,8 +497,14 @@
 
     </footer>
 
+
+    <!-- Slick-slider, Bootstrap & js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+JiG5C3ZnU4rd7HDWlZqf8zzTlsw3+bB6m8f7Lq5D5MUp8Iw" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="/assests/js/script.js"></script>
+
+
 </body>
 </html>
