@@ -1,41 +1,16 @@
 /* Carousel stuff-------------------------------- */
+
 $(document).ready(function () {
-    // Khởi tạo slider chính
-    $('.main-slide').slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      fade: true,
-      /* autoplay: true,
-      autoplaySpeed: 10000, */
-      asNavFor: '.center-slider',
-    });
-
-
-    var firstVideo = $('.main-slide .item').eq(0).find('video')[0];
-    if (firstVideo) {
-      firstVideo.play();
-    }
-
-    // Khi slide thay đổi
-    $('.main-slide').on('afterChange', function(event, slick, currentSlide){
-      var currentVideo = $('.main-slide .item').eq(currentSlide).find('video')[0];
-      if (currentVideo) {
-        currentVideo.play();
-      }
-    });
-
-
-    // Khi slide thay đổi
-    $('.main-slide').on('afterChange', function(event, slick, currentSlide){
-      var currentVideo = $('.main-slide .item').eq(currentSlide).find('video')[0];
-      if (currentVideo) {
-        currentVideo.play();
-      }
-    });
-
-    
+  $('.main-slide').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    asNavFor: '.center-slider',
+  });
 
     // Khởi tạo slider dẫn hướng
     $('.center-slider').slick({
@@ -73,9 +48,6 @@ $(document).ready(function () {
     });
 
 
-    $(window).on('load', function() {
-      firstVideo.play();
-    });
   });
 
   
