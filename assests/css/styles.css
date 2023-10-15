@@ -5,14 +5,17 @@
 }
 
 
-
+/* import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 
 /* color vari, and.... */
 :root {
     --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
     --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
 }
+
+
 
 /*universal*/
 * {
@@ -22,6 +25,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+
 html {
     width: 100vw;
     height: 100%;
@@ -29,7 +33,7 @@ html {
 
 body {
     background-color: rgb(6, 0, 12);
-    width: 100vw;
+    width: 100%;
     height: 100%;
     font-size: 16px;
 }
@@ -101,6 +105,7 @@ nav .navbar .nav-links .links li a {
 }
 
 
+
 /* Arrow of menu --------------------------------------------------------*/
 nav .navbar .nav-links .links li .arrow {
     height: 100%;
@@ -136,6 +141,7 @@ nav .navbar .nav-links .links .sub-menu li {
 }
 
 nav .navbar .nav-links .links .sub-menu li a{
+    text-transform: capitalize;
     font-size: 15px;
     font: 500;
 }
@@ -453,11 +459,11 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 
+
+
+
 /* carousel styles------------------------- */
 /* Main carousel */
-
-
-
 
 .intro-carousel {
     width: 100vw;
@@ -555,6 +561,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     margin-bottom: 2%;
 }
 
+
+
 .movie-content {
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;  
@@ -596,12 +604,16 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 
-.center-slider {
-}
 
 
+/* Large width  ----------------------------------*/
 
 @media (min-width: 800px) {
+
+    .intro-carousel,
+    .main-slide .item {
+        max-height: 100vw;
+    }
 
     .center-slider .item img{
         width: 20vw;
@@ -642,9 +654,19 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         transform: scale(0.8);
       }
       
+    .main-slide .item .slide-movie-text .movie-act,
+    .main-slide .item .slide-movie-text .movie-dir{
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+    }
 }
 
 
+
+/* Small width  ----------------------------------*/
 @media (max-width: 800px) {
 
     .main-slide .item video {
