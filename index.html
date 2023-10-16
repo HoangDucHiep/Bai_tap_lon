@@ -73,8 +73,9 @@
                     </div>
         
                     <div class="account">
-                        <a href=""><i class='bx bx-user-circle'></i></a>
+                        <i class='bx bx-user-circle' data-bs-toggle="modal" data-bs-target="#myModal"></i>
                     </div>
+
                 </div>
                 <!-- nav most right end (search, account)-->
 
@@ -236,7 +237,7 @@
             
             <div class="intro-nav-slider">
                 <div class="intro-nav-slider-container">
-                    <div class="trending-title"><h2><i class="bi bi-fire text-danger"></i> Đang hot</h2></div>
+                    <div class="trending-title"><h2><i class='bx bxs-hot text-danger'></i> Đang hot</h2></div>
 
                     <div class="center-slider slider-content">
                         <div class="item">
@@ -401,7 +402,7 @@
                             <div class="col-6 col-md-4 col-lg-3 movie-card ">
                                 <div class="card ">
                                     <div class="movie-img">
-                                        <img src="/assests/img/movie/uncharted.webp" class="card-img-top" alt="uncharted">
+                                        <img src="/assests/img/movie/uncharted.jpg" class="card-img-top" alt="uncharted">
                                     </div>
                                     <div class="card-body">
                                         <a href="#">
@@ -496,7 +497,23 @@
 
 
     <footer>
-
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
+            Open modal
+          </button>
+        </div>
+        
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+        
+              <!-- Modal body -->
+              <div class="modal-body login body">
+                Modal body..
+              </div>
+            </div>
+          </div>
+        </div>
     </footer>
 
 

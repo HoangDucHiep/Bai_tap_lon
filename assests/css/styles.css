@@ -30,13 +30,13 @@
 html {
     width: 100vw;
     height: 100%;
+    font-size: calc(15px + 0.390625vw);
 }
 
 body {
     background-color: rgb(6, 0, 12);
     width: 100%;
     height: 100%;
-    font-size: calc(15px + 0.390625vw);
 }
 
 
@@ -52,7 +52,7 @@ nav {
     background: var(--nav-bg-lg-layout); 
     color: #fff;
     width: 100vw;
-    z-index: 1000;
+    z-index: 100;
     
 }
 
@@ -234,7 +234,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     position: absolute;
     height: 35px;
     width: 280px;
-    z-index: 98;
+    z-index: 100;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -248,6 +248,10 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     color: white;
 }
 
+
+#myModal {
+    z-index: 2000;
+}
 
 /* hide sidebar at large layout--------------------------------------------------------*/
 .navbar .bx-menu,
@@ -320,7 +324,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         line-height: 40px;
         transition: all 0.5s ease; 
         backdrop-filter: blur(10px);
-        z-index: 2000;
+        z-index: 11;
     }
 
     nav .navbar .logo-brand{
@@ -346,7 +350,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         color: #fff;
         font-size: 25px;
         font-weight: 500;
-        z-index: 2000;
+        z-index: 11;
     }
 
 
@@ -518,16 +522,16 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 .main-slide .item .slide-movie-text h1 {
     text-transform: capitalize;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 550;
 }
 .main-slide .item .slide-movie-text h6 {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     font-weight: 400;
     margin-top: 1%;
 }
 .main-slide .item .slide-movie-text p {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 350;
 }
 
@@ -602,7 +606,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     left: 0;
     right: 0;
     background: var(--mask-lg-color);
-    z-index: 0;
+    z-index: -5;
 }
 
 
@@ -626,7 +630,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 .intro-carousel .intro-nav-slider .intro-nav-slider-container .trending-title h2 {
-    font-size: 1.7rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -798,7 +802,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 /* Movie list-------------- */
 
 .main .movie-list-heading {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -843,19 +847,19 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 .main .movie-list  .movie-card .card a .movie-category{
-    font-size: 0.85rem;
+    font-size: 0.7rem;
     font-weight: 500;
     color: rgb(82, 82, 82);
 }
 
 .main .movie-list  .movie-card .card a .movie-name {
-    font-size: 1.3rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 500;
     margin-top: 0;
 }
 
 .main .movie-list  .movie-card .card a .movie-rating {
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 .main .movie-list  .movie-card .card a .bxs-star{

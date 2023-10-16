@@ -1,0 +1,79 @@
+
+
+.modal-dialog {
+    width: 350px;
+    height: 340px;
+    border-radius: 15px;
+}
+
+.modal-content {
+    width: 350px;
+    height: 340px;
+    border-radius: 15px;
+    background-color: rgba(19, 19, 19, 0.491);
+    position: relative;
+    color: white;
+}
+
+.close-modal {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 15px;
+    z-index: 1;
+}
+
+form {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-top: 5px;
+}
+
+.forget {
+    margin-top: 5px;
+}
+
+label[for="remember"] {
+    display: inline-block;
+}    
+
+.input-field {
+    width: 100%;
+    position: relative;
+
+}
+
+#password, #email{
+    position: absolute;
+    left: 25px;
+    right: 0px;
+    height: 100%;
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+    color: white;
+}
+
+#password:focus, #email:focus{
+    outline: none;
+}
+
+#password[type="password"] ~ .input-field i.fa-solid.fa-eye {
+    color: red; /* Thay đổi màu sắc tại đây */
+}
+
+.remember-and-forget {
+    display: flex;
+    justify-content: space-between;
+}
+
+.submit {
+    margin-top: 5px;
+    text-align: center;
+    width: 100%;
+}
+
