@@ -917,13 +917,27 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     left: 50%;
     top: 0;
     background: linear-gradient(45deg, #01ccffd8, #c001ffd8, #ff0059, #ff0059, #c001ffd8, #01ccffd8);
-    width: 40vw;
-    max-width: 450px;
-    min-width: 450px;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1000;
     border-radius: 3%;
+}
+
+@media (min-width: 800px) {
+    .signin{
+        width: 40vw;
+        max-width: 450px;
+        min-width: 450px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .signin{
+        width: 75vw;
+        min-width: 300px;
+    }
+    
 }
 
 .signin::before {
