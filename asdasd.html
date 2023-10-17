@@ -16,86 +16,552 @@
 
     <!-- bootstrap & css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="dsasd.css">
+    <link rel="stylesheet" href="/assests/css/styles.css">
 
 </head>
 <body>
     
+    <header>
+        <!-- nav begin -->
+        <nav>
+            <div class="navbar">
+                <i class='bx bx-menu'></i>
+                <!-- nav logo begin -->
+                <div class="logo-brand"><a href="#">Movizzz</a></div>
+                <!-- nav logo end -->
 
-  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-    Open modal
-  </button>
-  </div>
-
-  <!-- The Modal -->
-  <div class="modal" id="myModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content sign-modal-content">
-
-        <!-- Modal body -->
-        <div class="modal-body sign-modal-body">
-          <div class="signin">
-            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
-            <h2 class="login-form-header">Login</h2>
-            <form action="" id="signin-form">
-              <fieldset class="email-pass-acc">
-                <div class="email-sign">
-                  <label for="email-sign">Email:</label>
-                  <div class="input-field email-sign-input-field">
-                    <i class="fa-regular fa-envelope input-icon"></i>
-                    <input type="email" id="email-sign" name="email" required>
-                  </div>
-                  
-                </div>
-                
-                
-                <div class="password-sign">
-                  <label for="password-sign">Password:</label>
-                  <div class="input-field password-sign-input-field">
-                    <i class="fa-solid fa-lock input-icon"></i>
-                    <input type="password" name="password" id="password-sign" required>
-                    <div id="pass-toggle" onclick="showHide();">
-                      <i class="fa-regular fa-eye show-tog"></i>
-                      <i class="fa-regular fa-eye-slash hide-tog"></i>
+                <!-- nav menu begin -->
+                <div class="nav-links">
+                    <div class="sidebar-logo-brand">
+                        <span class="logo-brand-name">Movizzz</span>
+                        <i class="bx bx-x exit-sidebar"></i>
                     </div>
-                  </div>
+                    <ul class="links">
+                        <li class>
+                            <a href="#">Cụm rạp</a>
+                            <i class='bx bx-chevron-up arrow branch-arrow'></i>
+                            <ul class="branch-sub-menu sub-menu">
+                                <li><a href="#">Ba Đình</a></li>
+                                <li><a href="#">Cầu Giấy</a></li>
+                                <li><a href="#">Thanh Xuân</a></li>
+                                <li class="branch-nguyen-trai">
+                                    <a href="#">Nguyễn Trãi</a>
+                                    <i class='bx bxs-chevron-right arrow branch-nguyen-trai-arrow'></i>
+                                    <ul class="branch-nguyen-trai-sub-menu sub-menu">
+                                        <li><a href="#">Rạp 1</a></li>
+                                        <li><a href="#">Rạp 2</a></li>
+                                        <li><a href="#">Rạp 3</a></li>
+                                        <li><a href="#">Rạp 4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Lịch Chiếu</a></li>
+                        <li><a href="#">Khuyến Mãi</a></li>
+                        <li><a href="#">Giá</a></li>
+                        <li><a href="#">Giới Thiệu</a></li>
+                    </ul>
                 </div>
-  
-                <div class="remember-and-forget-log">
-                  <div class="remember-log">
-                    <input type="checkbox" id="remember" name="remember">
-                    <label for="remember">Remember me</label>
-                  </div>
-                  <div class="forget-log">
-                    <a href="#">forget password?</a>
-                  </div>
-                </div>
+                <!-- nav menu end -->
                 
-                <div class="submit">
-                  <input type="submit" value="Log in" id="submit">
+                <!-- nav most right begin (search, account)-->
+                <div class="nav-right">
+                    <div class="search-box">
+                        <i class='bx bx-search'></i>
+                        <div class="input-box">
+                            <input type="text" placeholder="Search here">
+                        </div>
+                    </div>
+        
+                    <div class="account" data-bs-toggle="modal" data-bs-target="#myModal">
+                        <i class='bx bx-user-circle' data-bs-toggle="modal" data-bs-target="#myModal"></i>
+                    </div>
+
                 </div>
-                
-              </fieldset>
-              
+                <!-- nav most right end (search, account)-->
 
-              <fieldset class="sign-with">
-                <p id="sign-with-text">or login with</p>
-                <div class="other-med">
-                  <a href="#"><img src="/assests/img/icon/face-min.png" alt="face-icon" class="face-icon"></a>
-                  <a href="#"><img src="/assests/img/icon/google-min.png" alt="gg-icon" class="goo-icon"></a>
+            </div>
+        </nav>
+        <!-- nav end -->
+        
+        <!-- login modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content sign-modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body sign-modal-body">
+                <div class="signin">
+                    <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                    <h2 class="login-form-header">Login</h2>
+                    <form action="" id="signin-form">
+                    <fieldset class="email-pass-acc">
+                        <div class="email-sign">
+                            <label for="email-sign">Email:</label>
+                            <div class="input-field email-sign-input-field">
+                                <i class="fa-regular fa-envelope input-icon"></i>
+                                <input type="email" id="email-sign" name="email" required>
+                            </div>
+                        
+                        </div>
+                        
+                        
+                        <div class="password-sign">
+                        <label for="password-sign">Password:</label>
+                        <div class="input-field password-sign-input-field">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" name="password" id="password-sign" required>
+                            <div id="pass-toggle" onclick="showHide();">
+                            <i class="fa-regular fa-eye show-tog"></i>
+                            <i class="fa-regular fa-eye-slash hide-tog"></i>
+                            </div>
+                        </div>
+                        </div>
+        
+                        <div class="remember-and-forget-log">
+                        <div class="remember-log">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <div class="forget-log">
+                            <a href="#">forget password?</a>
+                        </div>
+                        </div>
+                        
+                        <div class="submit">
+                        <input type="submit" value="Log in" id="submit">
+                        </div>
+                        
+                    </fieldset>
+                    
+
+                    <fieldset class="sign-with">
+                        <p id="sign-with-text">or login with</p>
+                        <div class="other-med">
+                        <a href="#"><img src="/assests/img/icon/face-min.png" alt="face-icon" class="face-icon"></a>
+                        <a href="#"><img src="/assests/img/icon/google-min.png" alt="gg-icon" class="goo-icon"></a>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="change-sign-up">
+                        <a href="#" id="to-sign-up-link">sign up</a>
+                    </fieldset>
+                    </form>
                 </div>
-              </fieldset>
 
-              <fieldset class="change-sign-up">
-                <a href="#" id="to-sign-up-link">sign up</a>
-              </fieldset>
-            </form>
-          </div>
-
+                </div>
+            </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
+
+
+    </header>
+
+
+    <!--Main part of the web-->
+    <main>
+        <!-- Carousel wrapper -->
+        <section class="intro-carousel">
+            <div class="main-slide">
+        
+                <!-- Single item -->
+                <div class="item">
+                    <div class="mask"></div>
+                    <video src="/assests/video/carousel/john wick.mp4" type="video/mp4" autoplay muted id="first-slide-vid"></video>
+                    <img src="/assests/img/movie/Jhon Wick.jpg" alt="john wick">
+                    
+                    <div class="movie slide-movie-text white-text">
+                        <div class="movie-name">
+                            <h1 class="">John Wick</h2>
+                            <h6 class="">John Wick</h4>
+                        </div>
+                        <div class="movie-infor">
+                            <div class="movie-category d-flex">
+                            <p>Hành động</p>
+                            <p>Bắn súng</p>
+                            </div>
+                            <div class="movie-time"><p>163 phút</p></div>
+                            <div class="movie-dir"><p>Đạo diễn: Chad Stahelski</p></div>
+                            <div class="movie-act"><p>Diễn viên: Keanu Reeves, Alfie Allen, Michael Nyqvist,...</p></div>
+                            <div class="fst-italic movie-content"><p>Nhân vật chính của loạt phim là John Wick do tài tử Keanu Reeves thủ vai, là một cựu sát thủ đã rửa tay gác kiếm, tuy nhiên có những kẻ đã giết chó và trộm xe của anh, khiến anh phải quay trở lại con đường cũ.</p></div>
+                            <div class="text-danger movie-restriction"><p>Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</p></div>
+                        <!--Đánh giá-->
+                            <div class="text-warning movie-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn movie-ticket-booking"><p>Đặt vé</p></a>
+                        </div>
+                    
+                    </div>
+                </div>
+                
+                <!-- Single item -->
+                <div class="item">
+                    <div class="mask"></div>
+                    <video src="/assests/video/carousel/jurasic world.mp4" type="video/mp4" autoplay muted class=""></video>
+                    <img src="/assests/img/movie/jurassic world.jpg" alt="jurassic world">
+                    
+                    <div class="movie slide-movie-text white-text">
+                        <div class="movie-name">
+                            <h1 class="">Thế giới khủng long</h2>
+                            <h6 class="">Jurassic World Dominion</h4>
+                        </div>
+                        <div class="movie-infor">
+                            <div class="movie-category d-flex"">
+                            <p>Hành động</p>
+                            <p>Phiêu lưu</p>
+                            </div>
+                            <div class="movie-time"><p>147 phút</p></div>
+                            <div class="movie-dir"><p>Đạo diễn: Colin Trevorrow</p></div>
+                            <div class="movie-act"><p>Diễn viên: Chris Pratt, Bryce Dallas Howard, Isabella Sermon,...</p></div>
+                            <div class="fst-italic movie-content"><p>Bốn năm sau sự kiện trong Jurassic World: Fallen Kingdom, thế giới đã chứng kiến sự tự do của các con khủng long. Owen Grady gặp lại Blue, một trong những khủng long anh yêu thích, và cô đang nuôi một chú con khủng long khác. Owen quyết tâm bảo vệ họ, nhưng hai loài khủng long này khác biệt nhau. Liệu con người và khủng long có thể sống hòa thuận? Chris Pratt và Bryce Dallas Howard tái xuất trong vai Owen Grady và Claire Dearing, và dàn diễn viên gốc như Laura Dern, Sam Neill, Jeff Goldblum và BD Wong cũng trở lại trong các vai nhân vật kinh điển từ Jurassic Park.</p></div>
+                            <div class="text-danger movie-restriction"><p>Khuyến cáo: T16 - Phim được phổ biến dành cho người đủ 16 tuổi (16+)</p></div>
+                        <!--Đánh giá-->
+                            <div class="text-warning movie-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn movie-ticket-booking"><p>Đặt vé</p></a>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <!-- Single item -->
+                <div class="item">
+                    <div class="mask"></div>
+                    <video src="/assests/video/carousel/theboys.mp4" type="video/mp4" autoplay muted class=""></video>
+                    <img src="/assests/img/movie/the boys.jpg" alt="the boys">
+                    
+                    <div class="movie slide-movie-text white-text">
+                        <div class="movie-name">
+                            <h1 class="">Siêu Anh Hùng Phá Hoại</h2>
+                            <h6 class="">The Boys</h4>
+                        </div>
+                        <div class="movie-infor">
+                            <div class="movie-category d-flex">
+                            <p>Hành động</p>
+                            <p>Viễn tưởng</p>
+                            </div>
+                            <div class="movie-time"><p>45 phút</p></div>
+                            <div class="movie-dir"><p>Đạo diễn: Dan Trachtenberg, Matt Shakman, Matt Shakman</p></div>
+                            <div class="movie-act"><p>Diễn viên: Karl Urban, Jack Quaid, Antony Starr, Erin Moriarty,...</p></div>
+                            <div class="fst-italic movie-content"><p>Trong series giả tưởng đang gây sốt trên mạng Internet, chính những kẻ mặc áo choàng, sở hữu siêu năng lực mới thuộc nhóm phản diện. Được thực hiện bởi Seth Rogen, Evan Goldberg và Eric Kripke, The Boys xoay quanh một thực tại nơi các siêu anh hùng là những người nổi tiếng, có cả một công ty chủ quản là Vought thu về lợi nhuận khổng lồ từ hoạt động marketing, truyền thông, quảng cáo… Đằng sau hình ảnh hào nhoáng trước ống kính và công chúng, nhóm The Seven bao gồm 7 siêu nhân mạnh nhất hóa ra lại là tập hợp của những kẻ ích kỷ, độc ác, biến thái.</p></div>
+                            <div class="text-danger movie-restriction"><p>Khuyến cáo: T18 - Phim được phổ biến dành cho người đủ 18 tuổi (18+)</p></div>
+                        <!--Đánh giá-->
+                            <div class="text-warning movie-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn movie-ticket-booking"><p><p>Đặt vé</p></p></a>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+                <!-- Single item -->
+                <div class="item">
+                    <div class="mask"></div>
+                    <video src="/assests/video/carousel/spider-man.mp4" type="video/mp4" autoplay muted class=""></video>
+                    <img src="/assests/img/movie/spiderman.jpg" alt="">
+                    
+                    <div class="movie slide-movie-text white-text">
+                        <div class="movie-name">
+                            <h1 class="">Người nhện - Không còn nhà</h2>
+                            <h6 class="">Spider-Man No Way Home</h4>
+                        </div>
+                        <div class="movie-infor">
+                            <div class="movie-category d-flex">
+                            <p>Hành động</p>
+                            <p>Viễn tưởng</p>
+                            </div>
+                            <div class="movie-time"><p>218 phút</p></div>
+                            <div class="movie-dir"><p>Đạo diễn: Jon Watts</p></div>
+                            <div class="movie-act"><p>Diễn viên: Zendaya, Tom Holland, Jon Favreau, Benedict Cumberbatch, Angourie Rice,...</p></div>
+                            <div class="fst-italic movie-content"><p>Không Còn Nhà kể về lần đầu tiên trong lịch sử điện ảnh của Người Nhện, thân phận người hàng xóm thân thiện bị lật mở, khiến trách nhiệm làm một Siêu Anh Hùng xung đột với cuộc sống bình thường và đặt người anh quan tâm nhất vào tình thế nguy hiểm. Khi anh nhờ đến giúp đỡ của Doctor Strange để khôi phục lại bí mật, phép thuật đã gây ra lỗ hổng thời không, giải phóng những ác nhân mạnh mẽ nhất từng đối đầu với Người Nhện từ mọi vũ trụ. Bây giờ, Peter sẽ phải vượt qua thử thách lớn nhất của mình, nó sẽ thay đổi không chỉ tương lai của chính anh mà còn là tương lai của cả Đa Vũ Trụ.</p></div>
+                            <div class="text-danger movie-restriction"><p>Khuyến cáo: T13 - Phim được phổ biến dành cho người đủ 13 tuổi (13+)</p></div>
+                        <!--Đánh giá-->
+                            <div class="text-warning movie-rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                            </div>
+                            <a href="#" class="btn movie-ticket-booking"><p>Đặt vé</p></a>
+                        </div>
+                    
+                    </div>
+                </div>
+            
+            </div>
+            
+            
+            <div class="intro-nav-slider">
+                <div class="intro-nav-slider-container">
+                    <div class="trending-title"><h2><i class='bx bxs-hot text-danger'></i> Đang hot</h2></div>
+
+                    <div class="center-slider slider-content">
+                        <div class="item">
+                            <img src="/assests/img/movie/Jhon Wick.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="/assests/img/movie//jurassic world.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="/assests/img/movie/the boys.jpg" alt="">
+                        </div>
+                        <div class="item">
+                            <img src="/assests/img/movie/spiderman.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- Carousel wrapper -->
+
+
+
+        
+        <!-- Content part -->
+        <div class="main container">
+            <div class="row mt-4">
+                <div class="col-lg-10 offset-lg-1 list">
+                    <section id="on-going" class="mb-4">
+                        <h2 class="movie-list-heading white-text my-1"><i class='bx bxs-circle text-danger'></i> Đang khởi chiếu</h2>
+                        <div class="row movie-list mt-1 mx-0">
+                            <div class="col-6 col-md-4 col-lg-3 movie-card w-1">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/ant man.jpg" class="card-img-top" alt="ant man">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Ant Man</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/avengers.jpg" class="card-img-top" alt="avengers">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Avengers</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/collage romance.jpg" class="card-img-top" alt="collage romance">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Collage Romance</h4>
+                                            <p class="movie-category m-0">Lãng man, Học đường</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/jurassic world.jpg" class="card-img-top" alt="jurassic world">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Jurassic world</h4>
+                                            <p class="movie-category m-0">Khoa học viễn tưởng, phiêu lưu</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 4.5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/money heist.jpg" class="card-img-top" alt="money heist">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Money Heist</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/Jhon Wick.jpg" class="card-img-top" alt="John Wick">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">John Wick</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/the boys.jpg" class="card-img-top" alt="the boys">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">The boys</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/spiderman.jpg" class="card-img-top" alt="spiderman">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Spiderman - No Way Home</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                            <p class="movie-rating"><i class='bx bxs-star'></i> 5</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                                                
+                    </section>
+                    
+
+                    <!-- Coming soon -->
+                    <section id="comming-soon" class="my-4">
+                        <h2 class="movie-list-heading white-text mt-2"><i class='bx bxs-time-five text-warning'></i> Sắp chiếu</h2>
+                        <div class="row movie-list my-1 mx-0">
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/uncharted.jpg" class="card-img-top" alt="uncharted">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Uncharted</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/topgun.jpg" class="card-img-top" alt="topgun">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Topgun - Maverick</h4>
+                                            <p class="movie-category m-0">Hành Động</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/thor love of thunder.jpg" class="card-img-top" alt="thor love of thunder">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Thor love of thunder</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/moon knight.jpg" class="card-img-top" alt="moon knight">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Moon knight</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 col-md-4 col-lg-3 movie-card ">
+                                <div class="card ">
+                                    <div class="movie-img">
+                                        <img src="/assests/img/movie/kota factory.jpg" class="card-img-top" alt="kota factory">
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#">
+                                            <h4 class="card-title movie-name">Kota Factory</h4>
+                                            <p class="movie-category m-0">Hành Động, Khoa học viễn tưởng</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Break line -->
+                        <div class="breakline"></div>
+                        <!-- On Going -->
+                    </section>
+                    
+
+
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+    </main>
+
+
+    <footer>
+    </footer>
+
 
     <!-- Slick-slider, Bootstrap & js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -103,7 +569,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-KyZXEAg3QhqLMpG8r+JiG5C3ZnU4rd7HDWlZqf8zzTlsw3+bB6m8f7Lq5D5MUp8Iw" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="/assests/js/script.js"></script>
-    <script src="asdasdasd.js"></script>
+
 
 </body>
 </html>

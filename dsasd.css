@@ -1,8 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+/*commonn css*/
+.white-text {
+    color: white !important;
 }
+
+
+/* import font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+/* color vari, and.... */
+:root {
+    --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
+    --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
+}
+
+
+
+/*universal*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
 
 html {
     width: 100vw;
@@ -10,6 +32,14 @@ html {
     font-size: calc(15px + 0.390625vw);
     overflow-x: hidden;
 }
+
+body {
+    background-color: rgb(254, 254, 254);
+    width: 100%;
+    height: 100%;
+}
+
+/* -------------------------------login-signup ----------------------------------------- */
 
 .sign-modal-content {
     border: none;
@@ -28,22 +58,36 @@ html {
     left: 50%;
     top: 0;
     background: linear-gradient(45deg, #01ccffd8, #c001ffd8, #ff0059, #ff0059, #c001ffd8, #01ccffd8);
-    width: 40vw;
-    max-width: 450px;
-    min-width: 450px;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1000;
     border-radius: 3%;
 }
 
+@media (min-width: 800px) {
+    .signin{
+        width: 40vw;
+        max-width: 450px;
+        min-width: 450px;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .signin{
+        width: 75vw;
+        min-width: 300px;
+    }
+    
+}
+
 .signin::before {
     content: "";
     position: absolute;
-    left: 1%;
-    top: 1%;
-    bottom: 1%;
-    right: 1%;
+    left: 0.6%;
+    top: 0.6%;
+    bottom: 0.6%;
+    right: 0.6%;
     background-color: rgb(0, 0, 0);
     border-radius: 3%;
     z-index: -1000;
@@ -59,7 +103,18 @@ html {
 
 }
 
+.email-pass-acc {
+    margin-top: 13%;
+}
+
+.email-pass-acc label {
+    font-size: 0.85rem;
+    margin-top: 3%;
+    margin-bottom: 0.5%;
+}
+
 .login-form-header {
+    font-size: 2rem;
     margin-top: 4%;
 }
 
@@ -80,15 +135,17 @@ html {
 .password-sign-input-field {
     border: 1px solid white;
     border-radius: 6px;
+    translate: all 0.4s;
 }
 
 .input-icon {
+    font-size: 0.8rem;
     margin-left: 1.5%;
 }
 
 #email-sign, #password-sign {
     position: absolute;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     top: 0;
     bottom: 0;
     right: 0;
@@ -108,7 +165,7 @@ html {
     right: 2%;
     top: 50%;
     transform: translateY(-50%);
-
+    font-size: 0.8rem;
 }
 
 #pass-toggle {
@@ -135,7 +192,7 @@ html {
 .remember-and-forget-log {
     margin-top: 2%;
     margin-bottom: 5%;
-    font-size: 15px;
+    font-size: 0.7rem;
     display: flex;
     justify-content: space-between;
 }
@@ -147,6 +204,10 @@ html {
 .forget-log a {
     color: white;
     text-decoration: none;
+}
+
+label[for="remember"] {
+    font-size: 0.7rem;
 }
 
 .submit {
@@ -173,21 +234,13 @@ html {
     transform: scale(1);
 }
 
-.email-pass-acc {
-    margin-top: 13%;
-}
-
-.email-pass-acc label {
-    margin-top: 3%;
-    margin-bottom: 0.5%;
-}
 
 .sign-with {
     text-align: center;
 }
 
 #sign-with-text {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-top: 9%;
     margin-bottom: 1%;
 }
