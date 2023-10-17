@@ -901,8 +901,12 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 /* -------------------------------login-signup ----------------------------------------- */
 
 .sign-modal-content {
+    margin: auto;
     border: none;
     background-color: transparent;
+    height: 90vh;
+    overflow: hidden;
+
 }
 
 .sign-modal-body {
@@ -915,24 +919,28 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     color: white;
     height: fit-content;
     position: absolute;
-    left: -50%;
-    top: 0;
+    left: 50%;
+    top: 50%;
     background: linear-gradient(45deg, #01ccffd8, #c001ffd8, #ff0059, #ff0059, #c001ffd8, #01ccffd8);
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1000;
     border-radius: 3%;
+    transition: all 1s ease-in-out;
 }
 
 .signup {
-    left: 50%;
+    left: -55%;
+    opacity: 0;
+
 }
 
 
 
 @media (min-width: 800px) {
     .signin,
-    .signup{
+    .signup,
+    .sign-modal-content{
         width: 40vw;
         max-width: 450px;
         min-width: 450px;
@@ -942,7 +950,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 @media (max-width: 800px) {
     .signin,
-    .signup{
+    .signup,
+    .sign-modal-content{
         width: 75vw;
         min-width: 300px;
     }
@@ -978,16 +987,18 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 .email-pass-acc label {
     font-size: 0.85rem;
-    margin-top: 3%;
-    margin-bottom: 0.5%;
+    margin-top: 4%;
+    margin-bottom: 0;
 }
 
-.login-form-header {
-    font-size: 2rem;
+.login-form-header,
+.signup-form-header {
+    font-size: 1.7rem;
     margin-top: 4%;
 }
 
-#signin-form {
+#signin-form,
+#signup-form{
     text-align: left;
     width: 80%;
     margin: 5% auto;
@@ -1001,8 +1012,10 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 .email-sign-input-field,
-.password-sign-input-field {
-    border: 1px solid white;
+.password-sign-input-field,
+.phone-sign-input-field {
+    margin-top: 0;
+    border: 1px solid rgba(255, 255, 255, 0.329);
     border-radius: 6px;
     translate: all 0.4s;
 }
@@ -1012,7 +1025,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     margin-left: 1.5%;
 }
 
-#email-sign, #password-sign {
+#email-sign, #password-sign,
+#email-sign-up, #password-sign-up, #phone-sign-up, #password-sign-up-rp{
     position: absolute;
     font-size: 0.7rem;
     top: 0;
@@ -1024,7 +1038,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     border: none;
 }
 
-#email-sign:focus, #password-sign:focus {
+#email-sign:focus, #password-sign:focus,
+#email-sign-up:focus, #password-sign-up:focus, #phone-sign-up:focus, #password-sign-up-rp:focus {
     outline: none;
 }
 
@@ -1057,10 +1072,49 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     }
 }
 
+#pass-toggle-sn {
+    & .show-tog{
+        display: block;
+    }
+
+    & .hide-tog{
+        display: none;
+    }
+}
+
+#pass-toggle-sn.hide {
+    & .show-tog{
+        display: none;
+    }
+
+    & .hide-tog{
+        display: block;
+    }
+}
+
+#pass-toggle-sn-rp {
+    & .show-tog{
+        display: block;
+    }
+
+    & .hide-tog{
+        display: none;
+    }
+}
+
+#pass-toggle-sn-rp.hide {
+    & .show-tog{
+        display: none;
+    }
+
+    & .hide-tog{
+        display: block;
+    }
+}
+
 
 .remember-and-forget-log {
     margin-top: 2%;
-    margin-bottom: 5%;
     font-size: 0.7rem;
     display: flex;
     justify-content: space-between;
@@ -1082,9 +1136,11 @@ label[for="remember"] {
 .submit {
     text-align: center;
     width: 100%;
+    margin-top: 8%;
 }
 
-#login {
+#login,
+#signup {
     color: white;
     width: 100%;
     padding: 3px 0;
@@ -1098,7 +1154,8 @@ label[for="remember"] {
 
 }
 
-#login:hover {
+#login:hover,
+#signup:hover {
     background-position: right;
     transform: scale(1);
 }
@@ -1125,13 +1182,15 @@ label[for="remember"] {
     text-align: center;
 }
 
-#to-sign-up-link {
+#to-sign-up-link,
+#to-login-link {
     color: white;
     text-decoration: none;
     font-size: 0.9rem;
 }
 
 .forget-log a:hover,
-#to-sign-up-link:hover {
+#to-sign-up-link:hover,
+#to-login-link:hover {
     color: aqua;
 }

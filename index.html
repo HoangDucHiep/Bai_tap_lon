@@ -163,6 +163,14 @@
                                         </div>
                                     
                                     </div>
+
+                                    <div class="phone-sign">
+                                        <label for="phone-sign">Số điện thoại:</label>
+                                        <div class="input-field phone-sign-input-field">
+                                            <i class="fa-solid fa-phone input-icon"></i>
+                                            <input type="number" id="phone-sign-up" name="phone-sn" required>
+                                        </div>
+                                    </div>
                                     
                                     
                                     <div class="password-sign">
@@ -170,7 +178,19 @@
                                         <div class="input-field password-sign-input-field">
                                             <i class="fa-solid fa-lock input-icon"></i>
                                             <input type="password" name="password-sn" id="password-sign-up" required>
-                                            <div id="pass-toggle-sn" onclick="showHide();">
+                                            <div id="pass-toggle-sn" onclick="showHidesn();">
+                                                <i class="fa-regular fa-eye show-tog"></i>
+                                                <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="password-sign">
+                                        <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
+                                        <div class="input-field password-sign-input-field">
+                                            <i class="fa-solid fa-lock input-icon"></i>
+                                            <input type="password" name="password-sn-rp" id="password-sign-up-rp" required>
+                                            <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
                                                 <i class="fa-regular fa-eye show-tog"></i>
                                                 <i class="fa-regular fa-eye-slash hide-tog"></i>
                                             </div>

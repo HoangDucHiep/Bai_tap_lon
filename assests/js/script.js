@@ -142,30 +142,55 @@ function showHide() {
     }
 }
 
+/* ------------------ */
+let passwordSn = document.getElementById('password-sign-up');
+let togglePasswordSn = document.getElementById('pass-toggle-sn');
 
-const emailInputField = document.querySelector('.email-sign-input-field');
-const passwordInputField = document.querySelector('.password-sign-input-field');
-const emailInput = document.getElementById('email-sign');
-const passwordInput = document.getElementById('password-sign');
 
-emailInput.addEventListener('focus', () => {
-    emailInputField.style.border = '1px solid white';
-    emailInputField.style.transform = 'scale(1.01)';
+function showHidesn() {
+    if(passwordSn.type == 'password') {
+        passwordSn.setAttribute('type', 'text');
+        togglePasswordSn.classList.add('hide');
+    }
+    else {
+        passwordSn.setAttribute('type', 'password');
+        togglePasswordSn.classList.remove('hide');
+    }
+}
+
+/* ------------------ */
+let passwordSnRp = document.getElementById('password-sign-up-rp');
+let togglePasswordSnRp = document.getElementById('pass-toggle-sn-rp');
+
+
+function showHidesnrp() {
+    if(passwordSnRp.type == 'password') {
+        passwordSnRp.setAttribute('type', 'text');
+        togglePasswordSnRp.classList.add('hide');
+    }
+    else {
+        passwordSnRp.setAttribute('type', 'password');
+        togglePasswordSnRp.classList.remove('hide');
+    }
+}
+
+
+/* change form click */
+const signUpTog = document.getElementById('to-sign-up-link');
+const loginTog = document.getElementById('to-login-link');
+const loginForm = document.querySelector('.signin'); // Use the class name or ID of the login form
+const signupForm = document.querySelector('.signup'); // Use the class name or ID of the signup form
+
+signUpTog.addEventListener("click", () => {
+    loginForm.style.left = '155%';
+    signupForm.style.left = '50%';
+    loginForm.style.opacity = '0';
+    signupForm.style.opacity = '1';
 });
 
-emailInput.addEventListener('blur', () => {
-    emailInputField.style.border = '1.5px solid #8b8b8b6d'; // Reset the other input field's border
-    emailInputField.style.transform = 'scale(1)';
-});
-
-
-passwordInput.addEventListener('focus', () => {
-    passwordInputField.style.border = '1px solid white';
-    passwordInputField.style.transform = 'scale(1.01)';
-});
-
-
-passwordInput.addEventListener('blur', () => {
-    passwordInputField.style.border = '1.5px solid #8b8b8b6d'; // Reset the other input field's border
-    passwordInputField.style.transform = 'scale(1)';
+loginTog.addEventListener("click", () => {
+    loginForm.style.left = '50%';
+    signupForm.style.left = '-55%';
+    loginForm.style.opacity = '1';
+    signupForm.style.opacity = '0';
 });
