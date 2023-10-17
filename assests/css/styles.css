@@ -910,11 +910,12 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     position: relative;
 }
 
-.signin {
+.signin,
+.signup {
     color: white;
     height: fit-content;
     position: absolute;
-    left: 50%;
+    left: -50%;
     top: 0;
     background: linear-gradient(45deg, #01ccffd8, #c001ffd8, #ff0059, #ff0059, #c001ffd8, #01ccffd8);
     transform: translate(-50%, -50%);
@@ -923,8 +924,15 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     border-radius: 3%;
 }
 
+.signup {
+    left: 50%;
+}
+
+
+
 @media (min-width: 800px) {
-    .signin{
+    .signin,
+    .signup{
         width: 40vw;
         max-width: 450px;
         min-width: 450px;
@@ -933,14 +941,16 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 
 @media (max-width: 800px) {
-    .signin{
+    .signin,
+    .signup{
         width: 75vw;
         min-width: 300px;
     }
     
 }
 
-.signin::before {
+.signin::before,
+.signup::before {
     content: "";
     position: absolute;
     left: 0.6%;
@@ -1098,7 +1108,7 @@ label[for="remember"] {
     text-align: center;
 }
 
-#sign-with-text {
+.sign-with-text {
     font-size: 0.8rem;
     margin-top: 9%;
     margin-bottom: 1%;
