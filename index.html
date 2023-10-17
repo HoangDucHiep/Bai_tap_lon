@@ -6,6 +6,7 @@
     <title>Rap chieu proVip</title>
 
     <!-- import incon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
@@ -72,7 +73,7 @@
                         </div>
                     </div>
         
-                    <div class="account">
+                    <div class="account" data-bs-toggle="modal" data-bs-target="#myModal">
                         <i class='bx bx-user-circle' data-bs-toggle="modal" data-bs-target="#myModal"></i>
                     </div>
 
@@ -83,6 +84,77 @@
         </nav>
         <!-- nav end -->
         
+        <!-- login modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content sign-modal-content">
+
+                <!-- Modal body -->
+                <div class="modal-body sign-modal-body">
+                <div class="signin">
+                    <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                    <h2 class="login-form-header">Login</h2>
+                    <form action="" id="signin-form">
+                    <fieldset class="email-pass-acc">
+                        <div class="email-sign">
+                            <label for="email-sign">Email:</label>
+                            <div class="input-field email-sign-input-field">
+                                <i class="fa-regular fa-envelope input-icon"></i>
+                                <input type="email" id="email-sign" name="email" required>
+                            </div>
+                        
+                        </div>
+                        
+                        
+                        <div class="password-sign">
+                        <label for="password-sign">Password:</label>
+                        <div class="input-field password-sign-input-field">
+                            <i class="fa-solid fa-lock input-icon"></i>
+                            <input type="password" name="password" id="password-sign" required>
+                            <div id="pass-toggle" onclick="showHide();">
+                            <i class="fa-regular fa-eye show-tog"></i>
+                            <i class="fa-regular fa-eye-slash hide-tog"></i>
+                            </div>
+                        </div>
+                        </div>
+        
+                        <div class="remember-and-forget-log">
+                        <div class="remember-log">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Remember me</label>
+                        </div>
+                        <div class="forget-log">
+                            <a href="#">forget password?</a>
+                        </div>
+                        </div>
+                        
+                        <div class="submit">
+                        <input type="submit" value="Log in" id="submit">
+                        </div>
+                        
+                    </fieldset>
+                    
+
+                    <fieldset class="sign-with">
+                        <p id="sign-with-text">or login with</p>
+                        <div class="other-med">
+                        <a href="#"><img src="/assests/img/icon/face-min.png" alt="face-icon" class="face-icon"></a>
+                        <a href="#"><img src="/assests/img/icon/google-min.png" alt="gg-icon" class="goo-icon"></a>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="change-sign-up">
+                        <a href="#" id="to-sign-up-link">sign up</a>
+                    </fieldset>
+                    </form>
+                </div>
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+
     </header>
 
 
@@ -265,7 +337,7 @@
         <!-- Content part -->
         <div class="main container">
             <div class="row mt-4">
-                <div class="col-lg-10 list">
+                <div class="col-lg-10 offset-lg-1 list">
                     <section id="on-going" class="mb-4">
                         <h2 class="movie-list-heading white-text my-1"><i class='bx bxs-circle text-danger'></i> Đang khởi chiếu</h2>
                         <div class="row movie-list mt-1 mx-0">
@@ -479,16 +551,7 @@
 
                 </div>
 
-                <div class="col-lg-2 aside">
-                    <div class="card">
-                        <img src="/assests/img/movie/ant man.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
         
@@ -497,23 +560,6 @@
 
 
     <footer>
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-            Open modal
-          </button>
-        </div>
-        
-        <!-- The Modal -->
-        <div class="modal" id="myModal">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-        
-              <!-- Modal body -->
-              <div class="modal-body login body">
-                Modal body..
-              </div>
-            </div>
-          </div>
-        </div>
     </footer>
 
 

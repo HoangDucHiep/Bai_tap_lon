@@ -30,30 +30,30 @@
   <!-- The Modal -->
   <div class="modal" id="myModal">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <button type="button" class="close-modal" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+      <div class="modal-content sign-modal-content">
 
         <!-- Modal body -->
-        <div class="modal-body">
+        <div class="modal-body sign-modal-body">
           <div class="signin">
+            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
             <h2 class="login-form-header">Login</h2>
             <form action="" id="signin-form">
               <fieldset class="email-pass-acc">
-                <div class="email">
-                  <label for="email">Email:</label>
-                  <div class="input-field">
+                <div class="email-sign">
+                  <label for="email-sign">Email:</label>
+                  <div class="input-field email-sign-input-field">
                     <i class="fa-regular fa-envelope input-icon"></i>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email-sign" name="email" required>
                   </div>
                   
                 </div>
                 
                 
-                <div class="password">
-                  <label for="password">Password:</label>
-                  <div class="input-field">
+                <div class="password-sign">
+                  <label for="password-sign">Password:</label>
+                  <div class="input-field password-sign-input-field">
                     <i class="fa-solid fa-lock input-icon"></i>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password-sign" required>
                     <div id="pass-toggle" onclick="showHide();">
                       <i class="fa-regular fa-eye show-tog"></i>
                       <i class="fa-regular fa-eye-slash hide-tog"></i>
@@ -61,24 +61,37 @@
                   </div>
                 </div>
   
-                <div class="remember-and-forget">
-                  <div class="remember">
+                <div class="remember-and-forget-log">
+                  <div class="remember-log">
                     <input type="checkbox" id="remember" name="remember">
                     <label for="remember">Remember me</label>
                   </div>
-                  <div class="forget">
+                  <div class="forget-log">
                     <a href="#">forget password?</a>
                   </div>
                 </div>
                 
                 <div class="submit">
-                  <input type="submit" value="Submit" id="submit">
+                  <input type="submit" value="Log in" id="submit">
                 </div>
                 
               </fieldset>
               
+
+              <fieldset class="sign-with">
+                <p id="sign-with-text">or login with</p>
+                <div class="other-med">
+                  <a href="#"><img src="/assests/img/icon/face-min.png" alt="face-icon" class="face-icon"></a>
+                  <a href="#"><img src="/assests/img/icon/google-min.png" alt="gg-icon" class="goo-icon"></a>
+                </div>
+              </fieldset>
+
+              <fieldset class="change-sign-up">
+                <a href="#" id="to-sign-up-link">sign up</a>
+              </fieldset>
             </form>
           </div>
+
         </div>
       </div>
     </div>
