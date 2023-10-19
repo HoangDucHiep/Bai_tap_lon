@@ -1,54 +1,52 @@
 /* Carousel stuff-------------------------------- */
 
 $(document).ready(function () {
-  $('.main-slide').slick({
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    autoplay: true,
-    autoplaySpeed: 5000,
-    asNavFor: '.center-slider',
-  });
+    $('.main-slide').slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        asNavFor: '.center-slider',
+    });
 
     // Khởi tạo slider dẫn hướng
     $('.center-slider').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      centerMode: true,
-      arrows: false,
-      dots: false,
-      speed: 300,
-      centerPadding: '0px',
-      infinite: true,
-      autoplaySpeed: 5000,
-      autoplay: true,
-      asNavFor: '.main-slide',
-      focusOnSelect: true,
-      responsive: [
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 5,
-          slidesToScroll: 1,
-        }
-      },
-      {
-        breakpoint: 570,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1
-        }
-      },
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-      ]
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrows: false,
+        dots: false,
+        speed: 300,
+        centerPadding: '0px',
+        infinite: true,
+        autoplaySpeed: 5000,
+        autoplay: true,
+        asNavFor: '.main-slide',
+        focusOnSelect: true,
+        responsive: [
+        {
+            breakpoint: 800,
+            settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            }
+        },
+        {
+            breakpoint: 570,
+            settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+            }
+        },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+        ]
     });
-
-
-  });
+});
 
   
 /*--nav bar stuff---------------------------------*/

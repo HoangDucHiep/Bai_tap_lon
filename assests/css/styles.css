@@ -1,9 +1,7 @@
-
 /*commonn css*/
 .white-text {
     color: white !important;
 }
-
 
 /* import font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -13,6 +11,7 @@
 :root {
     --nav-bg-lg-layout: rgba(0 ,0 ,0 , 0.7);
     --nav-bg-sm-layout: rgba(0 ,0 ,0 , 0.8);
+    --main-bg: rgb(6, 0, 12);
 }
 
 
@@ -34,7 +33,7 @@ html {
 }
 
 body {
-    background-color: rgb(6, 0, 12);
+    background-color: var(--main-bg);
     width: 100%;
     height: 100%;
 }
@@ -74,6 +73,11 @@ nav .navbar .logo-brand a {
     font-weight: 600;
     text-decoration: none;
     color: #fff;
+    transition: all 0.2s ease-in;
+}
+
+nav .navbar .logo-brand:hover a {
+    font-size: 32px;
 }
 
 
@@ -171,7 +175,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     display: flex;
     justify-content: end;
     position: relative;
-
+    cursor: pointer;
 }
 
 .navbar .nav-right .account {
@@ -256,8 +260,38 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 
+.links li {
+    position: relative;
+}
+
+
+
+
+
+.search-box .bx-search::before,
+.account .bx-user-circle::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(100, 44, 255, 0), rgba(255, 63, 185, 0));
+    background-size: 0%;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+.search-box:hover .bx-search::before,
+.account:hover .bx-user-circle::before {
+    background: linear-gradient(50deg, rgba(100, 44, 255, 255), rgba(255, 63, 185, 255));
+    background-size: 100%;
+}
+
+
+
 @media (min-width: 954px) {
     
+
+
     nav .navbar{
         position: relative;
         backdrop-filter: blur(10px);
@@ -267,6 +301,25 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         position: absolute;
         left: 50%;
         transform: translate(-50%);
+    }
+
+    .links > li > a::before {
+        content: "";
+        position: absolute;
+        left: 2%;
+        right: 2%;
+        bottom: 20%;
+        height: 2px;
+        background: linear-gradient(45deg, rgb(46, 116, 255), rgb(181, 22, 255), rgb(220, 0, 165), rgb(220, 0, 165), rgb(181, 22, 255), rgb(46, 116, 255));
+        border-radius: 50%;
+        transform: scale(0);
+        transition: all 0.3s ease;
+    }
+    
+    
+
+    .links li:hover a::before{
+        transform: scale(1);
     }
 
 }
@@ -294,6 +347,10 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
     nav .navbar .nav-links .links .sub-menu{
         background: var(--nav-bg-lg-layout); 
+    }
+
+    .links > li > a::before {
+        right: 45%;
     }
 
 
@@ -481,19 +538,17 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     position: relative;
 }
 
-.main-slide .item video {
+.main-slide .item iframe {
     position: absolute;
-    display: block;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     -ms-transform: translate(-50%,-50%);
     -moz-transform: translate(-50%,-50%);
     -webkit-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-    display: block;
-    width: auto;
     z-index: -10;
 }
+
 
 .main-slide .item img {
     display: none;
@@ -590,11 +645,12 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 .movie-ticket-booking {
     
     padding: 1% 4%;
-    background-image: linear-gradient(45deg, rgb(46, 116, 255), rgb(181, 22, 255), rgb(255, 22, 115));
+    background-image: linear-gradient(45deg, rgb(46, 116, 255), rgb(181, 22, 255), rgb(220, 0, 165), rgb(220, 0, 165), rgb(181, 22, 255), rgb(46, 116, 255));
     border: none;
     border-radius: 0.6rem;
     color: white;
-    background-size: 150%;
+    background-position: left;
+    background-size: 200%;
     transition: 0.3s;
 }
 
@@ -679,22 +735,22 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         align-items: center;
         justify-content: center;
         transition: all 0.4s ease-in-out;
-      }
+    }
     
-      
-      .center-slider .slick-slide,
-      .center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
+    
+    .center-slider .slick-slide,
+    .center-slider .slick-slide[aria-hidden="true"]:not(.slick-cloned) ~ .slick-cloned[aria-hidden="true"] {
         transform: scale(0.55, 0.55);
         opacity: 0.5;
         transition: all 0.4s ease-in-out;
-      }
-      
-      /* Active center slide (You can change anything here for cenetr slide)*/
-      .center-slider .slick-current.slick-active{
+    }
+    
+    /* Active center slide (You can change anything here for cenetr slide)*/
+    .center-slider .slick-current.slick-active{
         opacity: 1;
         transform: scale(0.8);
-      }
-      
+    }
+
     .main-slide .item .slide-movie-text .movie-act,
     .main-slide .item .slide-movie-text .movie-dir{
         -webkit-line-clamp: 1;
@@ -710,7 +766,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 /* Small width  ----------------------------------*/
 @media (max-width: 800px) {
 
-    .main-slide .item video {
+    .main-slide .item iframe {
         display: none;
     }
     
@@ -1193,4 +1249,66 @@ label[for="remember"] {
 #to-sign-up-link:hover,
 #to-login-link:hover {
     color: aqua;
+}
+
+
+
+
+/* Footer */
+footer {
+    height: fit-content;
+    background-color: #12111c60;
+    border-top: 1px solid rgba(255, 255, 255, 0.134);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    color: white;
+}
+
+.Company,
+.contact {
+    margin: 0 2% 0 2%;
+    width: fit-content;
+}
+
+.contact {
+    padding-top: 1%;
+}
+
+.Company .logo-brand a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: white;
+}
+
+.Company p {
+    font-size: 0.7rem;
+    margin-bottom: 10%;
+}
+
+
+.contact-icon {
+    margin: 0;
+    width: 1.6vw;
+}
+
+.contact-list h6 {
+    font-size: 0.8rem;
+    margin-bottom: 1%;
+}
+
+.contact-list p,
+.contact-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.6rem;
+    margin-bottom: 10%;
+    margin-top: 5%;
+}
+
+.contact-list {
+    width: fit-content;
 }
