@@ -48,7 +48,8 @@ $(document).ready(function () {
     });
 });
 
-  
+
+
 /*--nav bar stuff---------------------------------*/
 
 //search box openclose------------------------------
@@ -140,7 +141,7 @@ function showHide() {
     }
 }
 
-/* ------------------ */
+/* ----------------------------show-hide pass for signup---------------------------- */
 let passwordSn = document.getElementById('password-sign-up');
 let togglePasswordSn = document.getElementById('pass-toggle-sn');
 
@@ -156,7 +157,7 @@ function showHidesn() {
     }
 }
 
-/* ------------------ */
+/* ------------------------show-hide pass for repeat password------------------------ */
 let passwordSnRp = document.getElementById('password-sign-up-rp');
 let togglePasswordSnRp = document.getElementById('pass-toggle-sn-rp');
 
@@ -173,11 +174,11 @@ function showHidesnrp() {
 }
 
 
-/* change form click */
+/* switch form click */
 const signUpTog = document.getElementById('to-sign-up-link');
 const loginTog = document.getElementById('to-login-link');
-const loginForm = document.querySelector('.signin'); // Use the class name or ID of the login form
-const signupForm = document.querySelector('.signup'); // Use the class name or ID of the signup form
+const loginForm = document.querySelector('.signin'); 
+const signupForm = document.querySelector('.signup'); 
 
 signUpTog.addEventListener("click", () => {
     loginForm.style.left = '155%';
@@ -192,3 +193,5 @@ loginTog.addEventListener("click", () => {
     loginForm.style.opacity = '1';
     signupForm.style.opacity = '0';
 });
+
+

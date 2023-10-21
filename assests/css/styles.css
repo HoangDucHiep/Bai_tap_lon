@@ -80,6 +80,10 @@ nav .navbar .logo-brand:hover a {
     font-size: 32px;
 }
 
+.movie-logo {
+    width: 8%;
+}
+
 
 /* Menu --------------------------------------------------------*/
 nav .navbar .nav-links {
@@ -218,7 +222,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     position: absolute;
     top: 50px;
     right: calc(100% - 40px);
-    border-radius: 6px;
+    border-radius: 5%;
     transition: all 0.3s ease;
     opacity: 0;
     pointer-events: none;
@@ -228,9 +232,23 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     top: 50px;
     opacity: 1;
     pointer-events: auto;
-
 }
 
+.navbar.showInput .search-box .input-box .seach-submit {
+    position: absolute;
+    z-index: 100;
+    top: 50%;
+    left: 100%;
+    transform: translate(-180%, -50%);
+    font-size: 0.9rem;
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.navbar.showInput .search-box .input-box .seach-submit:hover {
+    font-size: 0.95rem;
+}
 
 
 .navbar .search-box .input-box input{
@@ -241,9 +259,9 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border: none;
     border-radius: 4px;
     padding: 0 15px;
+    padding-right: 12%;
     font-size: 16px;
     background: rgba(0, 0, 0, 0);
     border: 1px solid white ;
@@ -265,25 +283,21 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 }
 
 
-
-
-
-.search-box .bx-search::before,
-.account .bx-user-circle::before {
+.search-box .search-icon::before,
+.account .acount-icon::before {
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background: linear-gradient(0deg, rgba(100, 44, 255, 0), rgba(255, 63, 185, 0));
-    background-size: 0%;
     border-radius: 50%;
     transition: background 0.2s ease;
 }
-.search-box:hover .bx-search::before,
-.account:hover .bx-user-circle::before {
+
+
+.search-box:hover .search-icon::before,
+.account:hover .acount-icon::before {
     background: linear-gradient(50deg, rgba(100, 44, 255, 255), rgba(255, 63, 185, 255));
-    background-size: 100%;
 }
 
 
@@ -310,7 +324,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         right: 2%;
         bottom: 20%;
         height: 2px;
-        background: linear-gradient(45deg, rgb(46, 116, 255), rgb(181, 22, 255), rgb(220, 0, 165), rgb(220, 0, 165), rgb(181, 22, 255), rgb(46, 116, 255));
+        background: linear-gradient(45deg, rgb(46, 116, 255), rgb(181, 22, 255), rgb(220, 0, 165), rgb(181, 22, 255), rgb(46, 116, 255));
         border-radius: 50%;
         transform: scale(0);
         transition: all 0.3s ease;
@@ -700,6 +714,10 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     font-weight: 550;
 }
 
+.intro-carousel .intro-nav-slider .intro-nav-slider-container .item {
+    cursor: pointer;
+}
+
 
 
 
@@ -885,10 +903,10 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     margin-top: 15px;
 }
 
-.main .movie-list  .movie-card .card .card-body {
+.main .movie-list  .movie-card .card .movie-item {
     padding: 10px 0;
-
 }
+
 
 .main .movie-list  .movie-card .card .movie-img {
     width: 100%;
@@ -923,9 +941,14 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 .main .movie-list  .movie-card .card a .movie-name {
     text-transform: capitalize;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 500;
     margin-top: 0;
+    color: #d8d8d8;
+}
+
+.main .movie-list  .movie-card .card .movie-item:hover .movie-name{
+    color: #ffffff;
 }
 
 .main .movie-list  .movie-card .card a .movie-rating{
@@ -940,6 +963,11 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     position: relative;
 }
 
+.main .movie-list  .movie-card .card a .movie-release-day {
+    color: #ffd900;
+    font-size: 0.7rem;
+}
+
 /*--------------------------- Break line ---------------------------------------------- */
 
 .breakline {
@@ -952,6 +980,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     transform: translate(-50%, -50%); 
     transition: width 0.6s; 
 }
+
+
 
 
 /* -------------------------------login-signup ----------------------------------------- */
@@ -977,12 +1007,12 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     position: absolute;
     left: 50%;
     top: 50%;
-    background: linear-gradient(45deg, #01ccffd8, #c001ffd8, #ff0059, #ff0059, #c001ffd8, #01ccffd8);
+    background: linear-gradient(45deg, #01ccffd8, #c001ffd8, #ff0059, #c001ffd8, #01ccffd8);
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1000;
     border-radius: 3%;
-    transition: all 1s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .signup {
@@ -1106,6 +1136,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     top: 50%;
     transform: translateY(-50%);
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 #pass-toggle {
