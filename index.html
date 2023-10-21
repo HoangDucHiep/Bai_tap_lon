@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
@@ -94,18 +94,18 @@
 
                     <!-- Modal body -->
                     <div class="modal-body sign-modal-body">
-                        <div class="signin">
+                        <div id="login">
                             <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
                             <h2 class="login-form-header">Đăng nhập</h2>
-                            <form action="" id="signin-form">
+                            <form id="signin-form" action="/">
                                 <fieldset class="email-pass-acc">
                                     <div class="email-sign">
                                         <label for="email-sign">Email:</label>
                                         <div class="input-field email-sign-input-field">
                                             <i class="fa-regular fa-envelope input-icon"></i>
-                                            <input type="email" id="email-sign" name="email" required>
+                                            <input type="text" id="email-sign" name="email">
+                                            <div class="error"></div>
                                         </div>
-                                    
                                     </div>
                                     
                                     
@@ -113,11 +113,12 @@
                                     <label for="password-sign">Mật khẩu:</label>
                                     <div class="input-field password-sign-input-field">
                                         <i class="fa-solid fa-lock input-icon"></i>
-                                        <input type="password" name="password" id="password-sign" required>
+                                        <input type="password" name="password" id="password-sign">
                                         <div id="pass-toggle" onclick="showHide();">
-                                        <i class="fa-regular fa-eye show-tog"></i>
-                                        <i class="fa-regular fa-eye-slash hide-tog"></i>
+                                            <i class="fa-regular fa-eye show-tog"></i>
+                                            <i class="fa-regular fa-eye-slash hide-tog"></i>
                                         </div>
+                                        <div class="error"></div>
                                     </div>
                                     </div>
                     
@@ -132,7 +133,7 @@
                                     </div>
                                     
                                     <div class="submit">
-                                    <input type="submit" value="Log in" id="login">
+                                        <button type="submit" id="login-sub">Đăng nhập</button>
                                     </div>
                                     
                                 </fieldset>
@@ -153,16 +154,17 @@
                         </div>
 
                         <!-- sign up -->
-                        <div class="signup">
+                        <div id="signup">
                             <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
                             <h2 class="signup-form-header">Đăng kí</h2>
-                            <form action="" id="signup-form">
+                            <form action="/" id="signup-form">
                                 <fieldset class="email-pass-acc">
                                     <div class="email-sign">
                                         <label for="email-sign">Email:</label>
                                         <div class="input-field email-sign-input-field">
                                             <i class="fa-regular fa-envelope input-icon"></i>
-                                            <input type="email" id="email-sign-up" name="email-sn" required>
+                                            <input type="email" id="email-sign-up" name="email-sn">
+                                            <div class="error"></div>
                                         </div>
                                     
                                     </div>
@@ -171,7 +173,8 @@
                                         <label for="phone-sign">Số điện thoại:</label>
                                         <div class="input-field phone-sign-input-field">
                                             <i class="fa-solid fa-phone input-icon"></i>
-                                            <input type="number" id="phone-sign-up" name="phone-sn" required>
+                                            <input type="text" id="phone-sign-up" name="phone-sn">
+                                            <div class="error"></div>
                                         </div>
                                     </div>
                                     
@@ -180,11 +183,12 @@
                                         <label for="password-sign-up">Mật khẩu:</label>
                                         <div class="input-field password-sign-input-field">
                                             <i class="fa-solid fa-lock input-icon"></i>
-                                            <input type="password" name="password-sn" id="password-sign-up" required>
+                                            <input type="password" name="password-sn" id="password-sign-up">
                                             <div id="pass-toggle-sn" onclick="showHidesn();">
                                                 <i class="fa-regular fa-eye show-tog"></i>
                                                 <i class="fa-regular fa-eye-slash hide-tog"></i>
                                             </div>
+                                            <div class="error"></div>
                                         </div>
                                     </div>
 
@@ -192,16 +196,17 @@
                                         <label for="password-sign-up-rp">Nhập lại mật khẩu:</label>
                                         <div class="input-field password-sign-input-field">
                                             <i class="fa-solid fa-lock input-icon"></i>
-                                            <input type="password" name="password-sn-rp" id="password-sign-up-rp" required>
+                                            <input type="password" name="password-sn-rp" id="password-sign-up-rp">
                                             <div id="pass-toggle-sn-rp" onclick="showHidesnrp();">
                                                 <i class="fa-regular fa-eye show-tog"></i>
                                                 <i class="fa-regular fa-eye-slash hide-tog"></i>
                                             </div>
+                                            <div class="error"></div>
                                         </div>
                                     </div>
                                     
                                     <div class="submit">
-                                    <input type="submit" value="Sign up" id="signup">
+                                        <button type="submit" id="signup-sub">Đăng kí</button>
                                     </div>
                                     
                                 </fieldset>
@@ -640,7 +645,7 @@
         <div class="container footer">
                 <div class="Company">
                     <div class="logo-brand"><a href="#">Movizzz</a></div>
-                    <p>Dịch vụ bán vé Movizzz</p>
+                    <p>Câu hỏi thường gặp</p>
                     <p>Đ/c: CNTT2-K63</p>
                 </div>
 

@@ -177,8 +177,8 @@ function showHidesnrp() {
 /* switch form click */
 const signUpTog = document.getElementById('to-sign-up-link');
 const loginTog = document.getElementById('to-login-link');
-const loginForm = document.querySelector('.signin'); 
-const signupForm = document.querySelector('.signup'); 
+const loginForm = document.getElementById('login'); 
+const signupForm = document.getElementById('signup'); 
 
 signUpTog.addEventListener("click", () => {
     loginForm.style.left = '155%';
@@ -194,4 +194,119 @@ loginTog.addEventListener("click", () => {
     signupForm.style.opacity = '0';
 });
 
+/* Form validation */
 
+const setError = (element, message) => {
+    const inputField = element.parentElement;
+    const errorDisplay = inputField.querySelector('.error');
+    errorDisplay.innerText = message;
+    inputField.classList.add('error');
+    inputField.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputField = element.parentElement;
+    const errorDisplay = inputField.querySelector('.error');
+    errorDisplay.innerText = '';
+    inputField.classList.add('success');
+    inputField.classList.remove('error');
+};
+
+const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
+const emailValidate = (email) => {
+    const emailValue = email.value.trim();
+
+    if(emailValue === '')
+    {
+        setError(email, 'Không thể để trống email!');
+    }
+    else if(!isValidEmail(emailValue)) 
+    {
+        setError(email, 'Email không hợp lệ!');
+    }
+    else{
+        setSuccess(email);
+    }
+};
+
+
+
+/* check valid password, sec para forRpPass have default argument */
+const passValidate = (password, forRpPass = "") => {
+    const passwordValue = password.value.trim();
+    if(passwordValue === '') {
+        setError(password, 'Không thể để trống mật khẩu!');
+    } else if (passwordValue.length < 8 ) {
+        setError(password, 'Mật khẩu cần có độ dài từ 8 kí tự!')
+    } else if (!/[A-Z]/.test(passwordValue[0])) {
+        setError(password, 'Mật khẩu phải bắt đầu bằng chữ cái in hoa!!');
+    } else if(!(/\d/.test(passwordValue))) {
+        setError(password, 'Mật khẩu phải chứa ít nhất một số!');
+    }  else if(forRpPass !== ''){  /* only used when have sec-arg */
+        if(forRpPass !== passwordValue){
+            setError(password, 'Mật khẩu không khớp!');
+        }
+        else {
+            setSuccess(password);
+        }
+    }
+    else {
+        setSuccess(password);
+    }
+}
+
+/* login-form */
+const login = document.getElementById('signin-form');
+const emailLogin = document.getElementById('email-sign');
+const passwordLogin = document.getElementById('password-sign');
+
+
+login.addEventListener('submit', e => {
+    e.preventDefault();
+    validateLogin();
+});
+
+const validateLogin = () => {
+
+    emailValidate(emailLogin);
+    passValidate(passwordLogin);
+
+
+}
+
+/* Sign up form */
+
+const signup = document.getElementById('signup-form');
+const emailSignup = document.getElementById('email-sign-up');
+const passwordSignup = document.getElementById('password-sign-up');
+const phoneSignup = document.getElementById('phone-sign-up');
+const rpPasswordSignup = document.getElementById('password-sign-up-rp');
+
+
+signup.addEventListener('submit', e => {
+    e.preventDefault();
+    validateSignup();
+});
+
+const validateSignup = () => {
+    const phoneValue = phoneSignup.value.trim();
+    emailValidate(emailSignup);
+    passValidate(passwordSignup);
+    passValidate(rpPasswordSignup, passwordSignup.value.trim());
+
+
+    /* check phone number */
+    if (phoneValue === '') {
+        setError(phoneSignup, 'Không thể để trống mật khẩu!');
+    }
+    else if (!/(09|03|07|08|05)[0-9]{8}/.test(phoneValue)){
+        setError(phoneSignup, 'Số điện thoại không hợp lệ!');
+    }
+    else {
+        setSuccess(phoneSignup);
+    }
+}
