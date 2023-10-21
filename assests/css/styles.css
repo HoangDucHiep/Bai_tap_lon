@@ -1198,7 +1198,7 @@ label[for="remember"] {
     background-position: left;
     background-size: 200%;
     transform: scale(0.98);
-    transition: 0.3s;
+    transition: 0.1s ease;
 
 }
 
