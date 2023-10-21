@@ -80,7 +80,7 @@ closeOpenBtn.addEventListener("click", () => {
 
 
 //sidebar submenu open-close----------------------
-let branchArrow = document.querySelector(".branch-arrow");
+let branchArrow = document.querySelector(".branch");
 branchArrow.onclick = function() {
     if (navLinks.classList.contains("show1")) {
         navLinks.classList.remove("show1");
@@ -90,7 +90,7 @@ branchArrow.onclick = function() {
     }
 };
 
-let branchNguyenTraiArrow = document.querySelector(".branch-nguyen-trai-arrow");
+let branchNguyenTraiArrow = document.querySelector(".branch-nguyen-trai");
 branchNguyenTraiArrow.onclick = function() {
     if (navLinks.classList.contains("show2")) {
         navLinks.classList.remove("show2");

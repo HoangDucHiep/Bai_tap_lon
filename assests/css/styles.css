@@ -59,29 +59,34 @@ nav .navbar {
     height: 100%;
     max-width: 100%;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 1rem;
+    position: relative;
 }
 
 
 /* logo brand --------------------------------------------------------*/
+nav .navbar .logo-brand {
+    width: fit-content;
+}
+
 nav .navbar .logo-brand a {
-    
-    font-size: 30px;
+    font-size: 1.4rem;
     font-weight: 600;
     text-decoration: none;
     color: #fff;
-    transition: all 0.2s ease-in;
+    transition: all 0.1s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 2%;
 }
 
 nav .navbar .logo-brand:hover a {
-    font-size: 32px;
+    font-size: 1.5rem;
 }
 
 .movie-logo {
-    width: 8%;
+    width: 2rem;
 }
 
 
@@ -96,11 +101,10 @@ nav .navbar .nav-links .links{
 }
 
 nav .navbar .nav-links .links li {
-    position: relative;
     display: flex;
     align-items: center;
     list-style: none;
-    padding: 0 14px;
+    padding: 0 0.5rem;
 }
 
 nav .navbar .nav-links .links li a {
@@ -109,7 +113,7 @@ nav .navbar .nav-links .links li a {
     color: white;
     height: 100%;
     white-space: nowrap;
-    font-size: 16px;
+    font-size: 0.78rem;
     font-weight: 600;
 }
 
@@ -145,14 +149,19 @@ nav .navbar .nav-links .links .sub-menu {
 }
 
 nav .navbar .nav-links .links .sub-menu li {
-    padding: 0 22px;
+    padding: 0 1rem;
     border-bottom: 1px solid var(--nav-bg-lg-layout);
 }
 
 nav .navbar .nav-links .links .sub-menu li a{
     text-transform: capitalize;
-    font-size: 15px;
+    font-size: 0.75rem;
     font: 500;
+    transition: all 0.1s;
+}
+
+nav .navbar .nav-links .links .sub-menu li:hover a{
+    font-size: 0.8rem;
 }
 
 /* arrow of subnav --------------------------------------------------------*/
@@ -176,27 +185,27 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 
 /* search and account --------------------------------------------------------*/
 .navbar .nav-right {
-    display: flex;
-    justify-content: end;
-    position: relative;
+    position: absolute;
+    right: 2%;
     cursor: pointer;
+    display: flex;
+    justify-content: space-around;
 }
 
 .navbar .nav-right .account {
-    position: absolute;
-    right: -50%;
+    position: relative;
     height: 40px;
     width: 40px;
 }
 
-.navbar .nav-right .account i{
+.navbar .account i{
+    position: absolute;
     height: 100%;
     width: 100%;
     line-height: 40px;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.2rem;
     font-weight: 500;
-    color: white;
 }
 
 .navbar .search-box {
@@ -211,9 +220,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     width: 100%;
     line-height: 40px;
     text-align: center;
-    font-size: 22px;
+    font-size: 1.1rem;
     font-weight: 600;
-    left: -50%;
 }
 
 .navbar .search-box .input-box {
@@ -259,15 +267,33 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 4px;
-    padding: 0 15px;
-    padding-right: 12%;
-    font-size: 16px;
-    background: rgba(0, 0, 0, 0);
+    padding-left: 0.4rem;
+    padding-right: 1.5rem;
+    font-size: 0.7rem;
+    background: transparent;
     border: 1px solid white ;
     border-radius: 5px;
     color: white;
 }
+
+.search-box .search-icon::before,
+.account .acount-icon::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+
+
+
+.search-box:hover .search-icon::before,
+.account:hover .acount-icon::before {
+    background: linear-gradient(50deg, rgba(100, 44, 255, 255), rgba(255, 63, 185, 255));
+}
+
 
 
 /* hide sidebar at large layout--------------------------------------------------------*/
@@ -282,32 +308,8 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     position: relative;
 }
 
-
-.search-box .search-icon::before,
-.account .acount-icon::before {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    border-radius: 50%;
-    transition: background 0.2s ease;
-}
-
-
-.search-box:hover .search-icon::before,
-.account:hover .acount-icon::before {
-    background: linear-gradient(50deg, rgba(100, 44, 255, 255), rgba(255, 63, 185, 255));
-}
-
-
-
 @media (min-width: 954px) {
-    
-
-
     nav .navbar{
-        position: relative;
         backdrop-filter: blur(10px);
     }
     
@@ -317,6 +319,7 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         transform: translate(-50%);
     }
 
+    /* hover nav links */
     .links > li > a::before {
         content: "";
         position: absolute;
@@ -329,13 +332,11 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         transform: scale(0);
         transition: all 0.3s ease;
     }
-    
-    
+
 
     .links li:hover a::before{
         transform: scale(1);
     }
-
 }
 
 
@@ -343,20 +344,6 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
 @media (max-width: 954px) {
     nav .navbar {
         max-width: 100%;
-        padding: 0 25px;
-    }
-    
-
-    nav .navbar .logo-brand a {
-        font-size: 26px;
-    }
-
-    nav .navbar .nav-links .links li {
-        padding: 0 10px;
-    }
-    
-    nav .navbar .nav-links .links li a {
-        font-size: 15px;
     }
 
     nav .navbar .nav-links .links .sub-menu{
@@ -366,8 +353,6 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     .links > li > a::before {
         right: 45%;
     }
-
-
 }
 
 /* sm nx layout (sidebar)--------------------------------------------------------*/
@@ -390,14 +375,18 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         line-height: 40px;
         transition: all 0.5s ease; 
         backdrop-filter: blur(10px);
-        z-index: 2000;
+        z-index: 1000;
     }
 
-    nav .navbar .logo-brand{
+    nav .navbar .logo-brand {
+        width: fit-content;
+    }
+    
+    nav .navbar .logo-brand a {
         position: absolute;
-        right: 50%;
-        transform: translateX(50%);
-        line-height: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     /* sidebar logo brand --------------------------------------------------------*/
@@ -486,7 +475,6 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
     /* sidebar all arrow--------------------------------------------------------*/
     nav .navbar .nav-links .links li .arrow {
         line-height: 40px;
-
     }
 
     nav .navbar .nav-links .links li:hover .branch-arrow,
@@ -501,33 +489,6 @@ nav .navbar .nav-links .links .branch-nguyen-trai .branch-nguyen-trai-sub-menu{
         transform: rotate(90deg);
     }
 
-}
-
-/* extra sm */
-@media (max-width: 300px){
-    nav .navbar .logo-brand a{
-        font-size: 15px;
-    }
-
-    .navbar .bx-menu,
-    .nav-links .sidebar-logo-brand .logo-brand-name,
-    .nav-links .sidebar-logo-brand .exit-sidebar{
-        font-size: 20px;
-        font-weight: 500;
-    }
-
-    .navbar .nav-right .account,
-    .navbar .search-box {
-        width: 27px;
-
-        align-items: center;
-    }
-
-    .navbar .nav-right .account i,
-    .navbar .search-box i{
-        line-height: 40px;
-        font-size: 17px;
-    }
 }
 
 
