@@ -128,7 +128,7 @@
                                         <label for="remember">Nhớ tôi</label>
                                     </div>
                                     <div class="forget-log">
-                                        <a href="#">Quên mật khẩu?</a>
+                                        <a href="#" id="to-reset">Quên mật khẩu?</a>
                                     </div>
                                     </div>
                                     
@@ -140,7 +140,7 @@
                                 
 
                                 <fieldset class="sign-with">
-                                    <p class="sign-with-text">Hoặc đang nhập bằng</p>
+                                    <p class="sign-with-text">Hoặc đăng nhập bằng</p>
                                     <div class="other-med">
                                     <a href="#"><img src="/assests/img/icon/face-min.png" alt="face-icon" class="face-icon"></a>
                                     <a href="#"><img src="/assests/img/icon/google-min.png" alt="gg-icon" class="goo-icon"></a>
@@ -160,10 +160,20 @@
                             <form action="/" id="signup-form">
                                 <fieldset class="email-pass-acc">
                                     <div class="email-sign">
-                                        <label for="email-sign">Email:</label>
+                                        <label for="email-sign-up">Email:</label>
                                         <div class="input-field email-sign-input-field">
                                             <i class="fa-regular fa-envelope input-icon"></i>
                                             <input type="email" id="email-sign-up" name="email-sn">
+                                            <div class="error"></div>
+                                        </div>
+                                    
+                                    </div>
+
+                                    <div class="name-sign">
+                                        <label for="name-sign-up">Họ và tên:</label>
+                                        <div class="input-field name-sign-input-field">
+                                            <i class="fa-regular fa-user input-icon"></i>
+                                            <input type="text" id="name-sign-up" name="name-sn">
                                             <div class="error"></div>
                                         </div>
                                     
@@ -226,6 +236,34 @@
                             </form>
                         </div>
 
+
+                        <!-- forgot pass -->
+                        <div id="reset-pass">
+                            <button type="button" class="close-modal close-sign-form" data-bs-dismiss="modal" ><i class="fa-solid fa-xmark"></i></button>
+                            <h2 class="reset-pass-form-header">Quên mật khẩu</h2>
+                            <form id="reset-pass-form" action="/">
+                                <fieldset class="email-pass-acc">
+                                    <p id="reset-pass-guide">Liên kết đặt lại mặt khẩu sẽ được gửi vào email của bạn</p>
+                                    <div class="reset-pass">
+                                        <label for="reset-pass">Email:</label>
+                                        <div class="input-field reset-pass-input-field">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" id="reset-pass-input" name="email">
+                                            <div class="error"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="submit">
+                                        <button type="submit" id="reset-sub">Gửi email đặt lại mật khẩu</button>
+                                    </div>
+                                    
+                                </fieldset>
+
+                                <fieldset class="change-sign-up">
+                                    <a href="#" id="back-login-link">Trở lại đăng nhập</a>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -547,7 +585,7 @@
                     <!-- Coming soon -->
                     <section id="comming-soon" class="my-4">
                         <h2 class="movie-list-heading white-text mt-2"><i class='bx bxs-time-five text-warning'></i> Sắp chiếu</h2>
-                        <div class="row movie-list my-1 mx-0">
+                        <div class="row movie-list comming-soon my-1 mx-0">
                             <div class="col-6 col-md-4 col-lg-3 movie-card ">
                                 <div class="card ">
                                     <div class="movie-img">

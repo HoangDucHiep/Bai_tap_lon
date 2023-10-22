@@ -46,6 +46,7 @@ $(document).ready(function () {
         // instead of a settings object
         ]
     });
+    
 });
 
 
@@ -174,11 +175,15 @@ function showHidesnrp() {
 }
 
 
-/* switch form click */
+/* switch form onclick */
 const signUpTog = document.getElementById('to-sign-up-link');
 const loginTog = document.getElementById('to-login-link');
 const loginForm = document.getElementById('login'); 
 const signupForm = document.getElementById('signup'); 
+const resetForm = document.getElementById('reset-pass');
+const resetTog = document.getElementById('back-login-link');
+const logToFoget = document.getElementById('to-reset');
+
 
 signUpTog.addEventListener("click", () => {
     loginForm.style.left = '155%';
@@ -194,6 +199,24 @@ loginTog.addEventListener("click", () => {
     signupForm.style.opacity = '0';
 });
 
+logToFoget.addEventListener("click", () => {
+    loginForm.style.left = "-55%";
+    resetForm.style.left = "50%";
+    loginForm.style.opacity = '0';
+    resetForm.style.opacity = '1';
+});
+
+resetTog.addEventListener("click", () => {
+    loginForm.style.left = "55%";
+    resetForm.style.left = "155%";
+    loginForm.style.opacity = '1';
+    resetForm.style.opacity = '0';
+});
+
+
+
+
+
 /* Form validation */
 
 const setError = (element, message) => {
@@ -202,7 +225,7 @@ const setError = (element, message) => {
     errorDisplay.innerText = message;
     inputField.classList.add('error');
     inputField.classList.remove('success')
-}
+} /* Set message and red border wrong input */
 
 const setSuccess = element => {
     const inputField = element.parentElement;
@@ -210,12 +233,12 @@ const setSuccess = element => {
     errorDisplay.innerText = '';
     inputField.classList.add('success');
     inputField.classList.remove('error');
-};
+};  /* Set green border validated */
 
 const isValidEmail = email => {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
-}
+}   /* Check if valid email */
 
 const emailValidate = (email) => {
     const emailValue = email.value.trim();
@@ -231,11 +254,10 @@ const emailValidate = (email) => {
     else{
         setSuccess(email);
     }
-};
+};  /* Checking email func */
 
 
-
-/* check valid password, sec para forRpPass have default argument */
+/* checking valid password, sec para forRpPass have default argument */
 const passValidate = (password, forRpPass = "") => {
     const passwordValue = password.value.trim();
     if(passwordValue === '') {
@@ -271,17 +293,15 @@ login.addEventListener('submit', e => {
 });
 
 const validateLogin = () => {
-
     emailValidate(emailLogin);
     passValidate(passwordLogin);
-
-
 }
 
 /* Sign up form */
 
 const signup = document.getElementById('signup-form');
 const emailSignup = document.getElementById('email-sign-up');
+const nameSignup = document.getElementById('name-sign-up');
 const passwordSignup = document.getElementById('password-sign-up');
 const phoneSignup = document.getElementById('phone-sign-up');
 const rpPasswordSignup = document.getElementById('password-sign-up-rp');
@@ -294,10 +314,22 @@ signup.addEventListener('submit', e => {
 
 const validateSignup = () => {
     const phoneValue = phoneSignup.value.trim();
+    const nameValue = nameSignup.value.trim();
+
     emailValidate(emailSignup);
     passValidate(passwordSignup);
     passValidate(rpPasswordSignup, passwordSignup.value.trim());
 
+    /* check fullname */
+    if(nameValue === '') {
+        setError(nameSignup, 'Không thể để trống họ tên!');
+    }
+    else if((nameValue.length - nameValue.replaceAll(' ', '').length) < 2) { /* must have 3 words for full name */
+        setError(nameSignup, 'Vui lòng nhập đầy đủ họ tên!');
+    }
+    else {
+        setSuccess(nameSignup);
+    }
 
     /* check phone number */
     if (phoneValue === '') {
@@ -309,4 +341,18 @@ const validateSignup = () => {
     else {
         setSuccess(phoneSignup);
     }
-}
+};
+
+
+/* reset form */
+const resetPassForm = document.getElementById('reset-pass-form');
+const resetEmail = document.getElementById('reset-pass-input');
+
+resetPassForm.addEventListener('submit', e => {
+    e.preventDefault();
+    validateReset();
+});
+
+const validateReset = () => {
+    emailValidate(resetEmail);
+};
